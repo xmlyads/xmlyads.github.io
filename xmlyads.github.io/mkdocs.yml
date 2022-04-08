@@ -1,0 +1,17 @@
+site_name: 喜马拉雅Ads
+site_url: xmlyads.github.io
+theme:
+  name: material
+  language: zh
+  palette:
+    scheme: slate
+    primary: deep orange
+    accent: indigo
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - MarketingAPI: mktapi.md
+  - About: about.md
