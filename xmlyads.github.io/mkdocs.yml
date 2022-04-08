@@ -1,5 +1,5 @@
 site_name: 喜马拉雅Ads
-site_url: xmlyads.github.io
+  #site_url: https://xmlyads.github.io
 theme:
   name: material
   language: zh
@@ -11,7 +11,15 @@ theme:
 plugins:
   - search
 
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
 nav:
   - Home: index.md
   - MarketingAPI: mktapi.md
   - About: about.md
+  - Example: example.md
