@@ -19,7 +19,10 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
-  - Home: index.md
-  - MarketingAPI: mktapi.md
+  - 关于我们: index.md
+  - Marketing API: 
+    - 从这里开始: mktapi/start.md
+    - 注册: mktapi/reg.md
+    - 广告实体: mktapi/entities.md
   - About: about.md
   - Example: example.md
