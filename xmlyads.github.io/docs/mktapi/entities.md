@@ -2,8 +2,6 @@
 
 ## 接口设计：
 
-<br/>
-
 ### 1. 刷新Access_token
 
 Access_Token是调用Marketing-API接口的调用凭证，由于Access_Token具有时效性（默认1天）,当Access_Token超时后，可以使用Refresh_Token进行刷新，每次刷新都会同时重置二者的有效期。Refresh_Token拥有较长的有效期。
