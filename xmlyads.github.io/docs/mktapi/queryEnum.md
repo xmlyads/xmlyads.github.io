@@ -16,7 +16,7 @@
 
 |  字段名   | 类型  | 是否必须 | 描述 |
 |  ----  | ---- | ---- | ---- | 
-| version  | string | 是 | 版本号 |
+| version  | string | 是 | [版本号](versionCode.md) |
 
 **返回字段释义：**
 
