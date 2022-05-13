@@ -48,7 +48,7 @@
 | - app_id  | int | 应用id |
 | - ad_account_info_list  | array | 应用下授权账户列表 |
 | -- ad_account_id  | int | 广告账户bcid |
-| -- approval_status  | string | 授权状态 |
+| -- authorization_status  | string | 授权状态 详情请见枚举接口 |
 
 **返回示例 :**
 
@@ -64,15 +64,15 @@
             "ad_account_info_list": [
                 {
                     "ad_account_id": 201196,
-                    "approval_status": "审核通过"
+                    "authorization_status": "AUTHORIZATION_PASS"
                 },
                 {
                     "ad_account_id": 751048,
-                    "approval_status": "审核中"
+                    "authorization_status": "AUTHORIZATIONING"
                 },
                 {
                     "ad_account_id": 1265661,
-                    "approval_status": "审核中"
+                    "authorization_status": "AUTHORIZATIONING"
                 }
             ]
         }
