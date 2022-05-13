@@ -7,7 +7,7 @@
     "status": 0,
     "type": "SUCCESS",
     "msg": "success",
-    "data": ""
+    "data": "xxxx"
 }
 
 ```
