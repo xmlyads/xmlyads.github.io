@@ -27,13 +27,11 @@
 |  ----  | ---- | ---- | ---- | 
 | fields  | array | 否 | 需要的返回字段，允许值：***id,ad_account_id,name,<br/>promotion_goal,budget_type,budget,status,<br/>create_time,update_time***|
 | filter  | object | 否 | 查询条件 |
-| - promotion_goal  | array | 否 | 推广目标，不支出传入多个参数，详情请见枚举接口 |
+| - promotion_goal  | array | 否 | 推广目标，不支出传入多个参数，详情请见枚举<br/>[promotion_goal](queryEnum.md) |
 | - status  | array | 否 | 状态，支持传入多个参数，详情请见枚举接口 [campaign_status](queryEnum.md) |
 | - keyword  | array | 否 | 查询关键字，不支持传入多个参数 |
-| - query_start_date &nbsp; | array | 否 | 查询起始时间，不支持传入多个参数 |
-| - query_end_date  | array | 否 | 查询结束时间，不支持传入多个参数 |
-| page_no | int | 否 | 查询结束时间 |
-| page_size | int | 否 | 查询结束时间 |
+| page_no | int | 否 | 默认值为1 |
+| page_size | int | 否 | 默认值为20 |
 
 **query示例：**
 
