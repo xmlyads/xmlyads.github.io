@@ -25,9 +25,9 @@
 
 |  字段名   | 类型  | 是否必须 | 描述 |
 |  ----  | ---- | ---- | ---- | 
-| fields  | array | 否 | 需要的返回字段，允许值：***id ,ad_account_id,campaign_id,<br/>name,app_postion_type,delivery_goal,<br/>download_mode,show_status,quick_delivery,<br/>template_id,template_name,<br/>create_time,update_time,start_time,<br/>end_time,schedule_time,<br/>target_url ,download_url,deep_link_url,<br/>application_pack_name,<br/>js_track_id,api_track_id,<br/>refund_status,ad_bidding,ad_target***|
+| fields  | array | 否 | 需要的返回字段，允许值：***id ,ad_account_id,campaign_id,<br/>name,app_postion_type,delivery_goal,download_mode,<br/>show_status,quick_delivery,template_id,template_name,<br/>create_time,update_time,start_time,end_time,schedule_time,<br/>target_url ,download_url,deep_link_url,<br/>application_pack_name,js_track_id,api_track_id,<br/>refund_status,ad_bidding,ad_target*** |
 | filter  | object | 否 | 查询条件 |
-| - promotion_goal  | array | 否 | 推广目标，不支持传入多个参数，<br/>详情请见枚举接口 ***promotion_goal*** |
+| - promotion_goal  | array | 否 | 推广目标，不支持传入多个参数，<br/>详情请见枚举接口 [promotion_goal](queryEnum.md) |
 | - status  | array | 否 | 状态，支持传入多个参数，<br/>详情请见枚举接口 [ad_status](queryEnum.md) |
 | - keyword  | array | 否 | 查询关键字，不支持传入多个参数 |
 | - budget_type  | array | 否 | 预算类型，不支持传入多个参数，<br/>详情请见枚举接口 [budget_type](queryEnum.md) |
@@ -73,11 +73,11 @@
 | -- ad_account_id  | string | 广告账户id |
 | -- campaign_id  | string | 广告组id |
 | -- name  | string | 计划名 |
-| -- app_postion_type  | string | 样式组合 |
-| -- delivery_goal   | string | 投放目标  |
-| -- download_mode  | string | 下载方式 |
-| -- show_status  | string | 展示状态 |
-| -- quick_delivery  | string | 是否快速投放 |
+| -- position | string | 样式组合 详情请见枚举接口 [position_type](queryEnum.md) |
+| -- delivery_goal   | string | 投放目标 详情请见枚举接口 [delivery_goal](queryEnum.md) |
+| -- download_mode  | string | 下载方式 详情请见枚举接口 [download_mode](queryEnum.md) |
+| -- status  | string | 展示状态 详情请见枚举接口 [ad_status](queryEnum.md) |
+| -- quick_delivery  | boolean | 是否快速投放 |
 | -- template_id  | string | 建站id |
 | -- template_name  | string | 建站名称 |
 | -- create_time  | string | 创建时间 |
@@ -91,7 +91,7 @@
 | -- application_pack_name | string | 应用包名称 |
 | -- js_track_id   | string | js追踪id |
 | -- api_track_id   | string | api追踪id |
-| -- refund_status  | string | 赔付状态 |
+| -- refund_status  | string | 赔付状态 详情请见枚举接口 [refund_status](queryEnum.md) |
 | -- ad_bidding  | string | 广告出价 |
 | --- ad_id  | int | 计划id |
 | --- budget_type  | string | 预算类型 |
@@ -108,10 +108,10 @@
 | --- age  | array | 年龄区间 |
 | --- apk  | string | app安装情况 |
 | --- child_age  | array | 儿童年龄区间 |
-| --- interest  | array | 行为兴趣 |
-| --- short_term_interest  | array | 收听兴趣 |
-| --- target_content_interests  | array | 内容定向 |
-| --- network  | array | 网络 |
+| --- interest  | array | 行为兴趣 详情请见定向信息查询接口 [interest](queryTarget.md) |
+| --- short_term_interest  | array | 收听兴趣 详情请见定向信息查询接口 [short_term_interest](queryTarget.md) |
+| --- target_content_interests  | array | 内容定向 详情请见定向信息查询接口 [target_content_interests](queryTarget.md) |
+| --- network  | array | 网络  |
 | --- operator  | array | 运营商 |
 | --- platform  | array | 平台 |
 | --- phone_brand  | array | 手机品牌 |
