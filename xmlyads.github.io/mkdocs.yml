@@ -24,7 +24,8 @@ nav:
     - 从这里开始: mktapi/start.md
     - 刷新accesstoken: mktapi/accessToken.md
     - 授权信息查询: mktapi/queryDevInfo.md
-    - 广告计划查询: mktapi/campaign.md
+    - 广告计划查询: mktapi/queryCampaign.md
+    - 广告单元查询: mktapi/queryAd.md
     - 注册: mktapi/reg.md
     - 广告实体: mktapi/entities.md
   - About: about.md
