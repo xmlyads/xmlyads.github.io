@@ -528,6 +528,20 @@
                 "name": "NO_LIMIT",
                 "desc": "不限"
             }
+        ],
+        "authorization_status": [
+            {
+                "name": "AUTHORIZATIONING",
+                "desc": "审核中"
+            },
+            {
+                "name": "AUTHORIZATION_PASS",
+                "desc": "审核通过"
+            },
+            {
+                "name": "AUTHORIZATION_FAILED",
+                "desc": "审核未通过"
+            }
         ]
     }
 }
