@@ -23,9 +23,9 @@
 
 |  字段名   | 类型  | 描述 |
 |  ----  | ---- | ---- | 
-| status  | int  | 状态码  0：正常 ， 其他：异常 |
-| type  | string  | 返回类型 |
-| msg  | string  | 返回信息 |
+| status  | int  | [状态码](errorCode.md#错误码和描述)  0：正常 ， 其他：异常 |
+| type  | string  | [返回类型](errorCode.md#错误码和描述) |
+| msg  | string  | [返回信息](errorCode.md#错误码和描述) |
 | data  | array | 返回数据 |
 | - id  | int | 数据主键id |
 | - name  | string | 数据名 |
