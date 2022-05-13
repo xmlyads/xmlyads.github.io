@@ -32,8 +32,8 @@ nav:
     - 数据报表域查询: mktapi/queryStatementField.md
     - 枚举信息查询:  mktapi/queryEnum.md
     - 枚举信息精确查询: mktapi/queryOneEnum.md
-    - 账户权限申请: mktapi/approvalLanch.md
     - 定向信息查询: mktapi/queryTarget.md
+    - 账户权限申请: mktapi/approvalLanch.md
     - 错误码: mktapi/errorCode.md
     - 注册: mktapi/reg.md
     - 广告实体: mktapi/entities.md
