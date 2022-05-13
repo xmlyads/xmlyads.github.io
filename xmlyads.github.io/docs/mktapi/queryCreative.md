@@ -28,8 +28,6 @@
 | - promotion_goal  | array | 否 | 推广目标,不支出传入多个参数，<br/>详情请见枚举接口 [promotion_goal](queryEnum.md) |
 | - status  | array | 否 | 状态，支持传入多个参数，详情请见枚举接口 [creative_status](queryEnum.md) |
 | - keyword  | array | 否 | 查询关键字，不支持传入多个参数 |
-| - query_start_date  | array | 否 | 查询起始时间，不支持传入多个参数 |
-| - query_end_date  | array | 否 | 查询结束时间，不支持传入多个参数 |
 | - media  | array | 否 | 目标app，不支持传入多个参数，详情请见枚举值 [media](queryEnum.md) |
 | - positions  | array | 否 | 投放位置，支持传入多个参数，详情请见枚举值 [position_type](queryEnum.md) |
 | - styles  | array | 否 | 样式选项，支持传入多个参数，详情见枚举 [style_info](queryEnum.md) |

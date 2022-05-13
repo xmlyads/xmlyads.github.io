@@ -30,8 +30,6 @@
 | - promotion_goal  | array | 否 | 推广目标，不支持传入多个参数，<br/>详情请见枚举接口 ***promotion_goal*** |
 | - status  | array | 否 | 状态，支持传入多个参数，<br/>详情请见枚举接口 [ad_status](queryEnum.md) |
 | - keyword  | array | 否 | 查询关键字，不支持传入多个参数 |
-| - query_start_date  | array | 否 | 查询起始时间，不支持传入多个参数 |
-| - query_end_date  | array | 否 | 查询结束时间，不支持传入多个参数 |
 | - budget_type  | array | 否 | 预算类型，不支持传入多个参数，<br/>详情请见枚举接口 [budget_type](queryEnum.md) |
 | - charge_method  | array | 否 | 计费方式，不支持传入多个参数，<br/>详情见枚举接口 [charge_method](queryEnum.md) |
 | - media  | array | 否 | 目标app，不支持传入多个参数，<br/>详情请见枚举值 [media](queryEnum.md) |
