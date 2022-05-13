@@ -64,11 +64,11 @@
 | - records  | array | 计划组数据列表 |
 | -- id  | string | 主键id |
 | -- name  | string | 名字 |
-| -- promotion_goal  | string | 推广目标 |
+| -- promotion_goal  | string | 推广目标 详情请见枚举接口 [promotion_goal](queryEnum.md) |
 | -- ad_account_id  | int | 广告账户id |
-| -- budget_type  | string | 预算类型 |
+| -- budget_type  | string | 预算类型 详情请见枚举接口 [budget_type](queryEnum.md) |
 | -- budget  | string | 预算值 |
-| -- status  | string | 状态 |
+| -- status  | string | 状态 详情请见枚举接口 [campaign_status](queryEnum.md) |
 | -- create_time   | string | 创建时间 |
 | -- update_time  | string | 更新时间 |
 

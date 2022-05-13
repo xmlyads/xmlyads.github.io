@@ -48,7 +48,7 @@
 | - app_id  | int | 应用id |
 | - ad_account_info_list  | array | 应用下授权账户列表 |
 | -- ad_account_id  | int | 广告账户bcid |
-| -- authorization_status  | string | 授权状态 详情请见枚举接口 |
+| -- authorization_status  | string | 授权状态 详情请见枚举接口 [authorization_status]      (queryEnum.md) |
 
 **返回示例 :**
 
