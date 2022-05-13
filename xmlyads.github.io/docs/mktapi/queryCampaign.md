@@ -23,7 +23,7 @@
 
 **query参数 ：**
 
-|  字段名   | 类型  | 是否必须 | 描述 |
+|  字段名 <img width=130/>   | 类型  | 是否必须 | 描述 |
 |  ----  | ---- | ---- | ---- | 
 | fields  | array | 否 | 需要的返回字段，允许值：***id,ad_account_id,name,<br/>promotion_goal,budget_type,budget,status,<br/>create_time,update_time***|
 | filter  | object | 否 | 查询条件 |
