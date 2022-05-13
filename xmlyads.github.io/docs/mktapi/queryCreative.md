@@ -25,14 +25,14 @@
 |  ----  | ---- | ---- | ---- | 
 | fields  | array | 否 | 需要的返回字段，允许值：***id,ad_id,ad_account_id,<br/>name,style,status,create_time,<br/>update_time,app_position_type,content***|
 | filter  | object | 否 | 查询条件 |
-| - promotion_goal  | array | 否 | 推广目标,不支出传入多个参数，<br/>详情请见枚举接口 ***promotion_goal*** |
-| - status  | array | 否 | 状态，支持传入多个参数，详情请见枚举接口 ***creative_status*** |
+| - promotion_goal  | array | 否 | 推广目标,不支出传入多个参数，<br/>详情请见枚举接口 [promotion_goal](queryEnum.md) |
+| - status  | array | 否 | 状态，支持传入多个参数，详情请见枚举接口 [creative_status](queryEnum.md) |
 | - keyword  | array | 否 | 查询关键字，不支持传入多个参数 |
 | - query_start_date  | array | 否 | 查询起始时间，不支持传入多个参数 |
 | - query_end_date  | array | 否 | 查询结束时间，不支持传入多个参数 |
-| - media  | array | 否 | 目标app，不支持传入多个参数，详情请见枚举值 ***media*** |
-| - positions  | array | 否 | 投放位置，支持传入多个参数，详情请见枚举值 ***position_type*** |
-| - styles  | array | 否 | 样式选项，支持传入多个参数，详情见枚举 ***style_info*** |
+| - media  | array | 否 | 目标app，不支持传入多个参数，详情请见枚举值 [media](queryEnum.md) |
+| - positions  | array | 否 | 投放位置，支持传入多个参数，详情请见枚举值 [position_type](queryEnum.md) |
+| - styles  | array | 否 | 样式选项，支持传入多个参数，详情见枚举 [style_info](queryEnum.md) |
 | page_no  | int | 否 | 默认值为1 |
 | page_size  | int | 否 | 默认值为20 |
 

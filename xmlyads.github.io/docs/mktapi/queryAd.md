@@ -28,14 +28,14 @@
 | fields  | array | 否 | 需要的返回字段，允许值：***id ,ad_account_id,campaign_id,<br/>name,app_postion_type,delivery_goal,<br/>download_mode,show_status,quick_delivery,<br/>template_id,template_name,<br/>create_time,update_time,start_time,<br/>end_time,schedule_time,<br/>target_url ,download_url,deep_link_url,<br/>application_pack_name,<br/>js_track_id,api_track_id,<br/>refund_status,ad_bidding,ad_target***|
 | filter  | object | 否 | 查询条件 |
 | - promotion_goal  | array | 否 | 推广目标，不支持传入多个参数，<br/>详情请见枚举接口 ***promotion_goal*** |
-| - status  | array | 否 | 状态，支持传入多个参数，<br/>详情请见枚举接口 ***ad_status*** |
+| - status  | array | 否 | 状态，支持传入多个参数，<br/>详情请见枚举接口 [ad_status](queryEnum.md) |
 | - keyword  | array | 否 | 查询关键字，不支持传入多个参数 |
 | - query_start_date  | array | 否 | 查询起始时间，不支持传入多个参数 |
 | - query_end_date  | array | 否 | 查询结束时间，不支持传入多个参数 |
-| - budget_type  | array | 否 | 预算类型，不支持传入多个参数，<br/>详情请见枚举接口 ***budget_type*** |
-| - charge_method  | array | 否 | 计费方式，不支持传入多个参数，<br/>详情见枚举接口 ***charge_method*** |
-| - media  | array | 否 | 目标app，不支持传入多个参数，<br/>详情请见枚举值 ***media*** |
-| - positions  | array | 否 | 投放位置，支持传入多个参数，<br/>详情请见枚举值 ***position_type*** |
+| - budget_type  | array | 否 | 预算类型，不支持传入多个参数，<br/>详情请见枚举接口 [budget_type](queryEnum.md) |
+| - charge_method  | array | 否 | 计费方式，不支持传入多个参数，<br/>详情见枚举接口 [charge_method](queryEnum.md) |
+| - media  | array | 否 | 目标app，不支持传入多个参数，<br/>详情请见枚举值 [media](queryEnum.md) |
+| - positions  | array | 否 | 投放位置，支持传入多个参数，<br/>详情请见枚举值 [position_type](queryEnum.md) |
 | page_no | int | 否 | 默认值为1 |
 | page_size  | int | 否 | 默认值为20 |
 

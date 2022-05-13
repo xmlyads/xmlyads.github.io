@@ -46,7 +46,7 @@
 | msg  | string  | [返回信息](errorCode.md#错误码和描述) |
 | data  | object | 返回数据 |
 | - app_id  | int | 应用id |
-| - ad_account_info_list  | object[] | 应用下授权账户列表 |
+| - ad_account_info_list  | array | 应用下授权账户列表 |
 | -- ad_account_id  | int | 广告账户bcid |
 | -- approval_status  | string | 授权状态 |
 

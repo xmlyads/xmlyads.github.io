@@ -27,10 +27,10 @@
 |  ----  | ---- | ---- | ---- | 
 | fields  | array | 否 | 需要的返回字段，允许值：***date_time,name,user_id,<br/>show,click,conv_num,deep_conv_num,<br/>ctr,cvr,deep_cvr,consume,cpc_consume,cpa,cpm,deep_cpa***|
 | filter  | object | 否 | 查询条件 |
-| - query_type  | array | 否 | 查询类型，不支持多个参数，详情请见枚举 ***statement_field*** |
-| - other_dimension  | array | 否 | 查询域，不支持多个参数，详情请见枚举 ***other_dimension*** |
+| - query_type  | array | 否 | 查询类型，不支持多个参数，详情请见枚举 [statement_field](queryEnum.md) |
+| - other_dimension  | array | 否 | 查询域，不支持多个参数，详情请见枚举 [other_dimension](queryEnum.md) |
 | - time_dimension  | array | 否 | 时间维度，不支持多个参数， DAY：天 ，HOUR：小时 |
-| - filter_value  | array | 否 | 筛选值，支持传入多个参数，详情请见报表搜索域接口返回值 |
+| - filter_value  | array | 否 | 筛选值，支持传入多个参数，详情请见[报表搜索域接口](queryStatementField.md) |
 | - query_end_date  | array | 否 | 结束时间，不支持多个参数 |
 | - query_start_date  | array | 否 | 开始时间，不支持多个参数 |
 | page_no  | int | 否 | 默认值为1 |
