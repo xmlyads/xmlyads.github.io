@@ -105,18 +105,18 @@
 | --- ad_id  | int | 计划id |
 | --- target_audience  | array | 定向人群包 |
 | --- exclude_target_audience  | array | 排除定向人群包 |
-| --- age  | array | 年龄区间 |
+| --- age  | array | 年龄区间 详情请见定向信息查询接口 [age](queryTarget.md) |
 | --- apk  | string | app安装情况 |
-| --- child_age  | array | 儿童年龄区间 |
+| --- child_age  | array | 儿童年龄区间 详情请见定向信息查询接口 [child_age](queryTarget.md) |
+| --- province | array | 城市信息 |
 | --- interest  | array | 行为兴趣 详情请见定向信息查询接口 [interest](queryTarget.md) |
 | --- short_term_interest  | array | 收听兴趣 详情请见定向信息查询接口 [short_term_interest](queryTarget.md) |
 | --- target_content_interests  | array | 内容定向 详情请见定向信息查询接口 [target_content_interests](queryTarget.md) |
-| --- network  | array | 网络  |
-| --- operator  | array | 运营商 |
-| --- platform  | array | 平台 |
-| --- phone_brand  | array | 手机品牌 |
-| --- province  | string | 手机品牌 |
-| --- sex  | array | 性别 |
+| --- network  | array | 网络 内容定向 详情请见定向信息查询接口 [network](queryTarget.md) |
+| --- operator  | array | 运营商 内容定向 详情请见定向信息查询接口 [operator](queryTarget.md) |
+| --- platform  | array | 平台 内容定向 详情请见定向信息查询接口 [platform](queryTarget.md) |
+| --- phone_brand  | array | 手机品牌 内容定向 详情请见定向信息查询接口 [phone_brand](queryTarget.md) |
+| --- sex  | array | 性别 内容定向 详情请见定向信息查询接口 [sex](queryTarget.md) |
 
 
 
