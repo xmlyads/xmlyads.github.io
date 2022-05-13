@@ -26,6 +26,8 @@ nav:
     - 授权信息查询: mktapi/queryDevInfo.md
     - 广告计划查询: mktapi/queryCampaign.md
     - 广告单元查询: mktapi/queryAd.md
+    - 广告创意查询: mktapi/queryCreative.md
+    - 广告素材查询: mktapi/querySegment.md
     - 注册: mktapi/reg.md
     - 广告实体: mktapi/entities.md
   - About: about.md
