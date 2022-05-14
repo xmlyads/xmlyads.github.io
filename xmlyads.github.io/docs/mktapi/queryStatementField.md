@@ -17,7 +17,7 @@
 |  字段名   | 类型  | 是否必须 | 描述 |
 |  ----  | ---- | ---- | ---- | 
 | ad_account_id  | int | 是 | 操作广告账户id |
-| statement_field  | string | 是 | 查询域枚举，详情请见枚举接口 |
+| statement_field  | string | 是 | 查询域枚举，详情请见枚举接口[statement_field](queryEnum.md) |
 
 **返回字段释义：**
 
