@@ -73,7 +73,7 @@
 | -- ad_id  | string | 计划id |
 | -- ad_account_id  | string | 广告账户id |
 | -- name  | string | 创意名 |
-| -- style  | string | 样式 |
+| -- style  | string | 样式 详情请见枚举接口 [style_info](queryEnum.md) |
 | -- status  | string | 状态 详情请见枚举接口 [creative_status](queryEnum.md)  |
 | -- create_time  | string | 创建时间 |
 | -- update_time  | string | 更新时间 |
