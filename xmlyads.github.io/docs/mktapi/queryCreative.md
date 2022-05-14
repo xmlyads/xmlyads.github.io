@@ -74,10 +74,10 @@
 | -- ad_account_id  | string | 广告账户id |
 | -- name  | string | 创意名 |
 | -- style  | string | 样式 |
-| -- status  | string | 状态 |
+| -- status  | string | 状态 详情请见枚举接口 [creative_status](queryEnum.md)  |
 | -- create_time  | string | 创建时间 |
 | -- update_time  | string | 更新时间 |
-| -- app_position_type  | string | 位置样式 |
+| -- position_type  | string | 位置样式 详情请见枚举接口 [position_type](queryEnum.md) |
 | -- content  | string | 创意内容 |
 
 **返回示例 :**
