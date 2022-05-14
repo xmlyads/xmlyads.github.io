@@ -77,8 +77,26 @@
 | -- status  | string | 状态 详情请见枚举接口 [creative_status](queryEnum.md)  |
 | -- create_time  | string | 创建时间 |
 | -- update_time  | string | 更新时间 |
-| -- position_type  | string | 位置样式 详情请见枚举接口 [position_type](queryEnum.md) |
+| -- position  | string | 位置样式 详情请见枚举接口 [position_type](queryEnum.md) |
 | -- content  | string | 创意内容 |
+| --- creative_id  | int | 创意id |
+| --- description  | string | 创意描述 |
+| --- ad_account_id  | int | 广告账户id |
+| --- app_desc  | string | app描述 |
+| --- video_duration  | int | 视频长度 |
+| --- album_id  | int | 专辑id |
+| --- track_id  | int | 声音id |
+| --- sound_content  | string | 音频文字版 |
+| --- urls  | string | 上传素材元素id和地址 |
+| --- click_button  | string | 行为号召 详情请见枚举接口 [click_button](queryEnum.md) |
+| --- title  | string | 标题 |
+| --- third_click_stat_url  | string | 三方点击链接 |
+| --- show_monitor_url  | string | 展示监控链接 |
+| --- promotion_app_name  | string | app名 |
+| --- upload_id  | string | 上传id |
+| --- pic_upload_id  | string | 图片上传id |
+| --- storage_id  | string | 上传模块id |
+
 
 **返回示例 :**
 
@@ -91,16 +109,37 @@
     "data": {
         "records": [
             {
-                "ad_id": "1003259",
-                "update_time": "0",
-                "create_time": "0",
-                "app_position_type": "NATIVE_FEEDS_RECOMMEND",
-                "name": "2222",
-                "style": "HORIZONTAL_SCREEN_VIDEO",
-                "id": "1010655",
-                "content": "{\"adId\":1003259,\"createTime\":0,\"adAccountId\":201196,\"name\":\"2222\",\"updateTime\":0,\"id\":1010655,\"status\":\"ENABLED\"}",
-                "ad_account_id": "201196",
-                "status": "ENABLED"
+                "id": 1008108,
+                "ad_id": 1002970,
+                "ad_account_id": 201196,
+                "name": "非拉活 极速版创意标题",
+                "style": "HORIZONTAL_SCREEN_BIGIMAGE",
+                "status": "PAUSED",
+                "create_time": 0,
+                "update_time": 0,
+                "position": "NATIVE_HOMEPAGE_BIGIMAGE",
+                "content": {
+                    "creative_id": 1008108,
+                    "description": "非拉活 极速版创意描述",
+                    "app_desc": "非拉活 极速版应用描述",
+                    "video_duration": 0,
+                    "album_id": 0,
+                    "track_id": 0,
+                    "sound_content": "",
+                    "urls": {
+                        "35": "http://audiotest.cos.tx.xmcdn.com/storages/1df7-audiotest/D0/2D/GKwaPd0GDgwnAAD7qwAAY-w5.jpg",
+                        "20": "http://audiotest.cos.tx.xmcdn.com/storages/e4f8-audiotest/D7/2B/GKwaPd0GDgwXAAHHaQAAY-w1.jpg",
+                        "14": "http://audiotest.cos.tx.xmcdn.com/storages/0aa4-audiotest/E4/6E/GKwaPd0GDgwaAAGLCwAAY-w2.jpg"
+                    },
+                    "click_button": "VIEW_NOW",
+                    "title": "非拉活 极速版 首页大图图片物料",
+                    "third_click_stat_url": null,
+                    "show_monitor_url": "https://skclick.jd.com/feedback/monitor?idfa=_IDFA_&imei=_IMEI_MD5_&oaid=_OAID_&ua=_UA_&clktime=_TS_&ip=_IP_&planid=1002970&os=_MODEL_&unitid=972266&creativeid=1008108&bd_vid=_RESPONSE_ID_&media=xmly&utmsource=xmly-feed&converttype=0&callbackurl=_CALLBACK_URL_",
+                    "promotion_app_name": "非拉活 极速版应用名",
+                    "upload_id": "0",
+                    "pic_upload_id": "0",
+                    "storage_id": null
+                }
             }
         ],
         "page_no": 1,
