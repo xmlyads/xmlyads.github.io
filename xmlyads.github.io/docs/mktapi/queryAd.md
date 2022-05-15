@@ -94,9 +94,9 @@
 | -- refund_status  | string | 赔付状态 详情请见枚举接口 [refund_status](queryEnum.md) |
 | -- ad_bidding  | string | 广告出价 |
 | --- ad_id  | int | 计划id |
-| --- budget_type  | string | 预算类型 |
+| --- budget_type  | string | 预算类型 详情请见枚举接口 [budget_type](queryEnum.md) |
 | --- budget  | int | 预算 |
-| --- charge_method  | string | 计费方式 |
+| --- charge_method  | string | 计费方式 详情请见枚举接口 [charge_method](queryEnum.md) |
 | --- price  | int | 价格 |
 | --- price_second  | int | 二阶段出价 |
 | --- ocpc_study_phase  | string | ocpc学习阶段 |
@@ -106,7 +106,7 @@
 | --- target_audience  | array | 定向人群包 |
 | --- exclude_target_audience  | array | 排除定向人群包 |
 | --- age  | array | 年龄区间 详情请见定向信息查询接口 [age](queryTarget.md) |
-| --- apk  | string | app安装情况 |
+| --- apk  | string | app安装情况 详情请见定向接口 [app](queryTarget.md) |
 | --- child_age  | array | 儿童年龄区间 详情请见定向信息查询接口 [child_age](queryTarget.md) |
 | --- province | array | 城市信息 [详情请见城市信息接口](queryProvince.md) |
 | --- interest  | array | 行为兴趣 详情请见定向信息查询接口 [interest](queryTarget.md) |
