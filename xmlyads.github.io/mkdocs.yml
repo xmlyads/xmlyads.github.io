@@ -37,6 +37,7 @@ nav:
       - 枚举信息查询:  mktapi/queryEnum.md
       - 枚举信息精确查询: mktapi/queryOneEnum.md
       - 定向信息查询: mktapi/queryTarget.md
+      - 地域信息查询: mktapi/queryProvince.md
       - 账户权限申请: mktapi/approvalLanch.md
       - 错误码: mktapi/errorCode.md
       - 版本说明: mktapi/versionCode.md
