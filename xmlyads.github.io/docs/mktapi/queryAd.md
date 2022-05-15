@@ -108,7 +108,7 @@
 | --- age  | array | 年龄区间 详情请见定向信息查询接口 [age](queryTarget.md) |
 | --- apk  | string | app安装情况 |
 | --- child_age  | array | 儿童年龄区间 详情请见定向信息查询接口 [child_age](queryTarget.md) |
-| --- province | array | 城市信息 |
+| --- province | array | 城市信息 [详情请见城市信息接口](queryProvince.md) |
 | --- interest  | array | 行为兴趣 详情请见定向信息查询接口 [interest](queryTarget.md) |
 | --- short_term_interest  | array | 收听兴趣 详情请见定向信息查询接口 [short_term_interest](queryTarget.md) |
 | --- target_content_interests  | array | 内容定向 详情请见定向信息查询接口 [target_content_interests](queryTarget.md) |
