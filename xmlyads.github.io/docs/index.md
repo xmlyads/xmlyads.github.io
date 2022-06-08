@@ -1,3 +1,3 @@
 # Marketing API 简介
 
-通过本篇您可以了解喜马拉雅Marketing API使用的基础知识，使用前您需要注册并申请成为开发者，接下来创建应用以获得refresh_token，当这两步都完成后，就可以向广告主申请授权，当广告主同意授权后您会获得对应的授权码，接下来使用授权码获取相应access_token就可以使用API管理账号进行Marketing API的调用了。
+通过本篇您可以了解喜马拉雅Marketing API使用的基础知识，使用前您需要注册并申请成为开发者，接下来创建应用以获得refresh_token，当这两步都完成后，就可以向广告主申请授权，当广告主同意授权后您会获得对应的授权码，接下来使用授权码获取相应access-token就可以使用API管理账号进行Marketing API的调用了。

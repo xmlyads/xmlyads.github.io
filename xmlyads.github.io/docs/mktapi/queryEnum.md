@@ -8,7 +8,7 @@
 
 |  字段名   | 类型  | 是否必须 | 描述 |
 |  ----  | ---- | ---- | ---- | 
-| access_token  | string | 是 | 鉴权用access_token |
+| access-token  | string | 是 | 鉴权用access-token |
 
 **请求参数 ：**  
 
