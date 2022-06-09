@@ -25,14 +25,14 @@
 
 |  字段名   | 类型  | 是否必须 | 描述 |
 |  ----  | ---- | ---- | ---- | 
-| fields  | array | 否 | 需要的返回字段，允许值：***date_time,name,user_id,<br/>show,click,conv_num,deep_conv_num,<br/>ctr,cvr,deep_cvr,consume,cpc_consume,cpa,cpm,deep_cpa***|
-| filter  | object | 否 | 查询条件 |
-| - query_type  | array | 否 | 查询类型，不支持多个参数，详情请见枚举 [statement_field](queryEnum.md) |
+| fields  | array | 是 | 需要的返回字段，允许值：***date_time,name,user_id,<br/>show,click,conv_num,deep_conv_num,<br/>ctr,cvr,deep_cvr,consume,cpc_consume,cpa,cpm,deep_cpa***|
+| filter  | object | 是 | 查询条件 |
+| - query_type  | array | 是 | 查询类型，不支持多个参数，详情请见枚举 [statement_field](queryEnum.md) |
 | - other_dimension  | array | 否 | 查询域，不支持多个参数，详情请见枚举 [other_dimension](queryEnum.md) |
-| - time_dimension  | array | 否 | 时间维度，不支持多个参数， DAY：天 ，HOUR：小时 |
+| - time_dimension  | array | 是 | 时间维度，不支持多个参数， DAY：天 ，HOUR：小时 |
 | - filter_value  | array | 否 | 筛选值，支持传入多个参数，详情请见[报表搜索域接口](queryStatementField.md) |
-| - query_end_date  | array | 否 | 结束时间，不支持多个参数 |
-| - query_start_date  | array | 否 | 开始时间，不支持多个参数 |
+| - query_end_date  | array | 是 | 结束时间，不支持多个参数 |
+| - query_start_date  | array | 是 | 开始时间，不支持多个参数 |
 | page_no  | int | 否 | 默认值为1 |
 | page_size  | int | 否 | 默认值为20 |
 
@@ -41,22 +41,38 @@
 ```json
 {
     "filter":{
-        "promotion_goal":[
-            "APPLICATION_DOWNLOAD"
+        "query_start_date":[
+            "2022-06-07"
+        ],
+        "query_end_date":[
+            "2022-06-09"
+        ],
+        "time_dimension":[
+            "DAY"
+        ],
+        "query_type":[
+            "USER"
         ]
     },
     "fields":[
-        "id",
-        "ad_id",
-        "ad_account_id",
+        "date_time",
         "name",
-        "style",
-        "status",
-        "create_time",
-        "update_time",
-        "app_position_Type",
-        "content"
-    ]
+        "user_id",
+        "show",
+        "click",
+        "conv_num",
+        "deep_conv_num",
+        "ctr",
+        "cvr",
+        "deep_cvr",
+        "consume",
+        "cpc_consume",
+        "cpa",
+        "cpm",
+        "deep_cpa"
+    ],
+    "pageNo":1,
+    "pageSize":20
 }
 ```
 
