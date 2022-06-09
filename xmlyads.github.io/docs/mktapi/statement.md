@@ -47,12 +47,8 @@
         "query_end_date":[
             "2022-06-09"
         ],
-        "time_dimension":[
-            "DAY"
-        ],
-        "query_type":[
-            "USER"
-        ]
+        "time_dimension":["DAY"],
+       "query_type":["USER"]
     },
     "fields":[
         "date_time",
@@ -71,8 +67,8 @@
         "cpm",
         "deep_cpa"
     ],
-    "pageNo":1,
-    "pageSize":20
+    "page_no":1,
+    "page_size":20
 }
 ```
 
