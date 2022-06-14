@@ -2,7 +2,7 @@
 
 获取广告计划列表信息
 
-**请求地址 ：** /ads-catyph/v1/campaign/get
+**请求地址 ：** https://catyph.ximalaya.com/ads-catyph/v1/campaign/get
 
 **请求方式 ：** GET
 

@@ -2,7 +2,7 @@
 
 获取当前开发者拥有哪些账户的操作权限，以及账户的审核状态
 
-**请求地址 ：** /ads-catyph/v1/developer/info
+**请求地址 ：** https://catyph.ximalaya.com/ads-catyph/v1/developer/info
 
 **请求方式 ：** GET
 

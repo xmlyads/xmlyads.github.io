@@ -2,7 +2,7 @@
 
 获取广告素材列表信息
 
-**请求地址 ：** /ads-catyph/v1/segment/get
+**请求地址 ：** https://catyph.ximalaya.com/ads-catyph/v1/segment/get
 
 **请求方式 ：** GET
 

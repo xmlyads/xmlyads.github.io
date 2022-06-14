@@ -2,7 +2,7 @@
 
 根据枚举名查询枚举信息
 
-**请求地址 ：** /ads-catyph/v1/system-enum/get-by-name
+**请求地址 ：** https://catyph.ximalaya.com/ads-catyph/v1/system-enum/get-by-name
 
 **请求方式 ：** GET
 

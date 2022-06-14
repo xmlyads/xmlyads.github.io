@@ -2,7 +2,7 @@
 
 开发者申请广告账户权限
 
-**请求地址 ：** /ads-catyph/v1/approval/launch
+**请求地址 ：** https://catyph.ximalaya.com/ads-catyph/v1/approval/launch
 
 **请求方式 ：** GET
 

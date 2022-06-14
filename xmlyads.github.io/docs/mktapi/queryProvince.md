@@ -2,7 +2,7 @@
 
 定向信息查询
 
-**请求地址 ：** /ads-catyph/v1/system-enum/province/get
+**请求地址 ：** https://catyph.ximalaya.com/ads-catyph/v1/system-enum/province/get
 
 **请求方式 ：** GET
 
@@ -10,7 +10,7 @@
 
 |  字段名   | 类型  | 是否必须 | 描述 |
 |  ----  | ---- | ---- | ---- | 
-| access-token  | string | 是 | 鉴权用access-token |
+| access-token  | string | 是 | 鉴权用access-https://catyph.ximalaya.comtoken |
 
 **请求参数 ：** 无
 

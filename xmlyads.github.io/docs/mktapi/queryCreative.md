@@ -1,6 +1,6 @@
 # 广告创意列表
 
-**请求地址 ：** /ads-catyph/v1/creative/get
+**请求地址 ：** https://catyph.ximalaya.com/ads-catyph/v1/creative/get
 
 **请求方式 ：** GET
 

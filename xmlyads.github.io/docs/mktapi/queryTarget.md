@@ -2,7 +2,7 @@
 
 定向信息查询
 
-**请求地址 ：** /ads-catyph/v1/system-enum/target/get
+**请求地址 ：** https://catyph.ximalaya.com/ads-catyph/v1/system-enum/target/get
 
 **请求方式 ：** GET
 

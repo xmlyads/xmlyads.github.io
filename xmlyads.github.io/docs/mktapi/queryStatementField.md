@@ -1,6 +1,6 @@
 # 数据报表域查询
 
-**请求地址 ：** /ads-catyph/v1/statement/field/get
+**请求地址 ：** https://catyph.ximalaya.com/ads-catyph/v1/statement/field/get
 
 **请求方式 ：** GET
 
