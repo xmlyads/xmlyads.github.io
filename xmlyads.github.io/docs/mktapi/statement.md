@@ -19,7 +19,7 @@
 |  字段名   | 类型  | 是否必须 | 描述 |
 |  ----  | ---- | ---- | ---- | 
 | ad_account_id  | int | 是 | 操作广告账户id |
-| query  | string | 是 | 请求参数结构，json格式，具体字段如下 |
+| query  | string | 是 | 请求参数结构，json格式，需要urlEncode，具体字段如下 |
 
 **query参数 ：**
 

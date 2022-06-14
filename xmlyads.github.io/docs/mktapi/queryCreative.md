@@ -17,14 +17,14 @@
 |  字段名   | 类型  | 是否必须 | 描述 |
 |  ----  | ---- | ---- | ---- | 
 | ad_account_id  | int | 是 | 操作广告账户id |
-| query  | string | 是 | 请求参数结构，json格式，具体字段如下 |
+| query  | string | 是 | 请求参数结构，json格式，需要urlEncode，具体字段如下 |
 
 **query参数 ：**
 
 |  字段名   | 类型  | 是否必须 | 描述 |
 |  ----  | ---- | ---- | ---- | 
-| fields  | array | 否 | 需要的返回字段，允许值：***id,ad_id,ad_account_id,<br/>name,style,status,create_time,<br/>update_time,app_position_type,content***|
-| filter  | object | 否 | 查询条件 |
+| fields  | array | 是 | 需要的返回字段，允许值：***id,ad_id,ad_account_id,<br/>name,style,status,create_time,<br/>update_time,app_position_type,content***|
+| filter  | object | 是 | 查询条件 |
 | - promotion_goal  | array | 否 | 推广目标,不支出传入多个参数，<br/>详情请见枚举接口 [promotion_goal](queryEnum.md) |
 | - status  | array | 否 | 状态，支持传入多个参数，详情请见枚举接口 [creative_status](queryEnum.md) |
 | - keyword  | array | 否 | 查询关键字，不支持传入多个参数 |

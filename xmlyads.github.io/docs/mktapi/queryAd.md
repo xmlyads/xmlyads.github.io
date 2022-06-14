@@ -19,14 +19,14 @@
 |  字段名   | 类型  | 是否必须 | 描述 |
 |  ----  | ---- | ---- | ---- | 
 | ad_account_id  | int | 是 | 操作广告账户id |
-| query  | string | 是 | 请求参数结构，json格式，具体字段如下 |
+| query  | string | 是 | 请求参数结构，json格式，需要urlEncode，具体字段如下 |
 
 **query参数 ：**
 
 |  字段名   | 类型  | 是否必须 | 描述 |
 |  ----  | ---- | ---- | ---- | 
-| fields  | array | 否 | 需要的返回字段，允许值：***id ,ad_account_id,campaign_id,<br/>name,app_postion_type,delivery_goal,download_mode,<br/>show_status,quick_delivery,template_id,template_name,<br/>create_time,update_time,start_time,end_time,schedule_time,<br/>target_url ,download_url,deep_link_url,<br/>application_pack_name,js_track_id,api_track_id,<br/>refund_status,ad_bidding,ad_target*** |
-| filter  | object | 否 | 查询条件 |
+| fields  | array | 是 | 需要的返回字段，允许值：***id ,ad_account_id,campaign_id,<br/>name,app_postion_type,delivery_goal,download_mode,<br/>show_status,quick_delivery,template_id,template_name,<br/>create_time,update_time,start_time,end_time,schedule_time,<br/>target_url ,download_url,deep_link_url,<br/>application_pack_name,js_track_id,api_track_id,<br/>refund_status,ad_bidding,ad_target*** |
+| filter  | object | 是 | 查询条件 |
 | - promotion_goal  | array | 否 | 推广目标，不支持传入多个参数，<br/>详情请见枚举接口 [promotion_goal](queryEnum.md) |
 | - status  | array | 否 | 状态，支持传入多个参数，<br/>详情请见枚举接口 [ad_status](queryEnum.md) |
 | - keyword  | array | 否 | 查询关键字，不支持传入多个参数 |
