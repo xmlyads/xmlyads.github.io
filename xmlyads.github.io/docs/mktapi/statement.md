@@ -25,7 +25,7 @@
 
 |  字段名   | 类型  | 是否必须 | 描述 |
 |  ----  | ---- | ---- | ---- | 
-| fields  | array | 是 | 需要的返回字段，允许值：***date_time,name,user_id,<br/>show,click,conv_num,deep_conv_num,<br/>ctr,cvr,deep_cvr,consume,cpc_consume,cpa,cpm,deep_cpa***|
+| fields  | array | 是 | 需要的返回字段，允许值：***date_time,name,user_id,<br/>show,click,conv_num,deep_conv_num,<br/>campaign_id,ad_id,creative_id,ctr,cvr,deep_cvr,<br/>consume,cpc_consume,cpa,cpm,deep_cpa***|
 | filter  | object | 是 | 查询条件 |
 | - query_type  | array | 是 | 查询类型，不支持多个参数，详情请见枚举 [statement_field](queryEnum.md) |
 | - other_dimension  | array | 否 | 查询域，不支持多个参数，详情请见枚举 [other_dimension](queryEnum.md) |
@@ -98,6 +98,9 @@
 | -- cpa  | string | cpa |
 | -- cpm  | string | cpm |
 | -- deep_cpa  | string | 深度转化成本 |
+| -- campaign_id  | string | 广告计划id |
+| -- ad_id  | string | 广告单元id |
+| -- creative_id  | string | 广告创意id |
 
 **返回示例 :**
 
@@ -120,7 +123,7 @@
                 "show": "108",
                 "consume": "0",
                 "click": "7",
-                "cvr": "null"
+                "cvr": "0.00%"
             }
         ],
         "page_no": 1,
