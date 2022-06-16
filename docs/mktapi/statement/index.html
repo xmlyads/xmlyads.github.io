@@ -601,52 +601,8 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../entities/" class="md-nav__link">
-        广告实体
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
-        About
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../example/" class="md-nav__link">
-        Example
-      </a>
     </li>
   
 
@@ -747,7 +703,7 @@
 <td>fields</td>
 <td>array</td>
 <td>是</td>
-<td>需要的返回字段，允许值：<strong><em>date_time,name,user_id,<br/>show,click,conv_num,deep_conv_num,<br/>campaign_id,ad_id,creative_id,ctr,cvr,deep_cvr,<br/>consume,cpc_consume,cpa,cpm,deep_cpa</em></strong></td>
+<td>需要的返回字段，允许值：<strong><em>date_time,name,user_id,<br/>show,click,conv_num,deep_conv_num,<br/>campaign_id,ad_id,creative_id,<br/>campaign_name,ad_name,creative_name，<br/>ctr,cvr,deep_cvr,consume,cpc_consume,<br/>cpa,cpm,deep_cpa</em></strong></td>
 </tr>
 <tr>
 <td>filter</td>
@@ -802,6 +758,33 @@
 <td>int</td>
 <td>否</td>
 <td>默认值为20</td>
+</tr>
+</tbody>
+</table>
+<p>注意：返回值fields和query_type类型相关:<br/></p>
+<table>
+<thead>
+<tr>
+<th>query_type类型</th>
+<th>fields支持查询字段</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USER</td>
+<td><strong><em>date_time,name,user_id,<br/>show,click,conv_num,deep_conv_num,<br/>ctr,cvr,deep_cvr,consume,cpc_consume,<br/>cpa,cpm,deep_cpa</em></strong></td>
+</tr>
+<tr>
+<td>CAMPAIGN</td>
+<td><strong><em>date_time,name,user_id,<br/>show,click,conv_num,deep_conv_num,campaign_id<br/>campaign_name,ctr,cvr,deep_cvr,consume,cpc_consume,<br/>cpa,cpm,deep_cpa</em></strong></td>
+</tr>
+<tr>
+<td>AD</td>
+<td><strong><em>date_time,name,user_id,<br/>show,click,conv_num,deep_conv_num,<br/>campaign_id,ad_id,<br/>campaign_name,ad_name,<br/>ctr,cvr,deep_cvr,consume,cpc_consume,<br/>cpa,cpm,deep_cpa</em></strong></td>
+</tr>
+<tr>
+<td>CREATIVE</td>
+<td><strong><em>date_time,name,user_id,<br/>show,click,conv_num,deep_conv_num,<br/>campaign_id,ad_id,creative_id,<br/>campaign_name,ad_name,creative_name，<br/>ctr,cvr,deep_cvr,consume,cpc_consume,<br/>cpa,cpm,deep_cpa</em></strong></td>
 </tr>
 </tbody>
 </table>
