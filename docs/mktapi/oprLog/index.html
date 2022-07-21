@@ -13,7 +13,7 @@
     
     
       
-        <title>枚举信息精确查询 - 喜马拉雅Ads</title>
+        <title>操作历史查询 - 喜马拉雅Ads</title>
       
     
     
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              枚举信息精确查询
+              操作历史查询
             
           </span>
         </div>
@@ -449,12 +449,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" checked>
       
       
       
@@ -475,11 +477,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../oprLog/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         操作历史查询
       </a>
+      
     </li>
   
 
@@ -496,14 +508,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
       
       
       
@@ -538,21 +548,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../queryOneEnum/" class="md-nav__link">
         枚举信息精确查询
       </a>
-      
     </li>
   
 
@@ -687,9 +687,9 @@
                 
 
 
-<h1 id="_1">枚举信息精确查询</h1>
-<p>根据枚举名查询枚举信息</p>
-<p><strong>请求地址 ：</strong> https://catyph.ximalaya.com/ads-catyph/v1/system-enum/get-by-name</p>
+<h1 id="_1">操作历史记录</h1>
+<p>获取广告主操作日志</p>
+<p><strong>请求地址 ：</strong> https://catyph.ximalaya.com/ads-catyph/v1/log/list</p>
 <p><strong>请求方式 ：</strong> GET</p>
 <p><strong>请求头参数 ：</strong></p>
 <table>
@@ -710,7 +710,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>请求参数 ：</strong> </p>
+<p><strong>请求参数 ：</strong></p>
 <p><strong>传参形式 ：</strong> Url Param</p>
 <table>
 <thead>
@@ -723,19 +723,85 @@
 </thead>
 <tbody>
 <tr>
-<td>name</td>
-<td>string</td>
+<td>ad_account_id</td>
+<td>int</td>
 <td>是</td>
-<td>枚举名</td>
+<td>操作广告账户id</td>
 </tr>
 <tr>
-<td>version</td>
+<td>query</td>
 <td>string</td>
 <td>是</td>
-<td><a href="../versionCode/">版本号</a></td>
+<td>请求参数结构，json格式，需要urlEncode，具体字段如下</td>
 </tr>
 </tbody>
 </table>
+<p><strong>query参数 ：</strong></p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>类型</th>
+<th>是否必须</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>operatorType</td>
+<td>String</td>
+<td>否</td>
+<td>操作员类型，不支持多个参数，详情请见枚举 <a href="../queryEnum/">brand_user_type</a></td>
+</tr>
+<tr>
+<td>operationType</td>
+<td>string</td>
+<td>否</td>
+<td>操作对象类型，不支持多个参数，详情请见枚举 <a href="../queryEnum/">operation_type</a></td>
+</tr>
+<tr>
+<td>operationAction</td>
+<td>string</td>
+<td>否</td>
+<td>操作动作 详情见枚举    <a href="../queryEnum/">operation_action</a></td>
+</tr>
+<tr>
+<td>startDate</td>
+<td>string</td>
+<td>是</td>
+<td>开始时间 不支持多个参数 格式 yyyy-MM-dd</td>
+</tr>
+<tr>
+<td>endDate</td>
+<td>string</td>
+<td>是</td>
+<td>结束时间，不支持多个参数 格式 yyyy-MM-dd</td>
+</tr>
+<tr>
+<td>page_no</td>
+<td>int</td>
+<td>否</td>
+<td>默认值为1</td>
+</tr>
+<tr>
+<td>page_size</td>
+<td>int</td>
+<td>否</td>
+<td>默认值为20</td>
+</tr>
+</tbody>
+</table>
+<p><strong>query示例：</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;operatorType&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;operationType&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;operationAction&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&quot;startDate&quot;</span><span class="p">:</span><span class="s2">&quot;2022-07-10&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">&quot;endDate&quot;</span><span class="p">:</span><span class="s2">&quot;2022-07-10&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">&quot;page_no&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="mi">20</span><span class="w"></span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
 <p><strong>返回字段释义：</strong></p>
 <table>
 <thead>
@@ -769,42 +835,129 @@
 <tr>
 <td>data</td>
 <td>array</td>
-<td>返回枚举数组</td>
+<td>返回数据</td>
 </tr>
 <tr>
-<td>- name</td>
-<td>string</td>
-<td>枚举值名字</td>
+<td>- page_no</td>
+<td>int</td>
+<td>分页数</td>
 </tr>
 <tr>
-<td>- desc</td>
+<td>- page_size</td>
+<td>int</td>
+<td>每页大小</td>
+</tr>
+<tr>
+<td>- data</td>
+<td>array</td>
+<td>列表</td>
+</tr>
+<tr>
+<td>-- operatorId</td>
+<td>Long</td>
+<td>操作员id</td>
+</tr>
+<tr>
+<td>-- operatorType</td>
 <td>string</td>
-<td>枚举值描述</td>
+<td>操作人角色</td>
+</tr>
+<tr>
+<td>-- targetUserId</td>
+<td>Long</td>
+<td>用户id</td>
+</tr>
+<tr>
+<td>-- targetUserType</td>
+<td>string</td>
+<td>用户类型</td>
+</tr>
+<tr>
+<td>-- operationType</td>
+<td>string</td>
+<td>操作对象类型</td>
+</tr>
+<tr>
+<td>-- targetId</td>
+<td>Int</td>
+<td>目标ID</td>
+</tr>
+<tr>
+<td>-- targetName</td>
+<td>string</td>
+<td>目标名称</td>
+</tr>
+<tr>
+<td>-- operationAction</td>
+<td>string</td>
+<td>操作动作</td>
+</tr>
+<tr>
+<td>-- operationDetail</td>
+<td>string</td>
+<td>操作描述</td>
+</tr>
+<tr>
+<td>-- operationIp</td>
+<td>string</td>
+<td>操作人ip</td>
+</tr>
+<tr>
+<td>-- createTime</td>
+<td>string</td>
+<td>操作时间</td>
+</tr>
+<tr>
+<td>-- updateTime</td>
+<td>string</td>
+<td>更新时间</td>
 </tr>
 </tbody>
 </table>
 <p><strong>返回示例 :</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SUCCESS&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;msg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FIRST_PERIOD_END&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="nt">&quot;desc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;第一周期赔付结束&quot;</span><span class="w"></span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="p">},</span><span class="w"></span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SECOND_PERIOD_END&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">            </span><span class="nt">&quot;desc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;第二周期赔付结束&quot;</span><span class="w"></span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="p">},</span><span class="w"></span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INVALID&quot;</span><span class="p">,</span><span class="w"></span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">            </span><span class="nt">&quot;desc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;第二周期赔付结束&quot;</span><span class="w"></span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="p">]</span><span class="w"></span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;msg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">&quot;trace_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cfded9e6eca4a0f20f8ce8de2f96da14&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="nt">&quot;operationAction&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CREATE&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="nt">&quot;targetName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="nt">&quot;targetId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">198</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="nt">&quot;targetUserId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">205835</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="nt">&quot;updateTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-07-13 10:36:15&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="nt">&quot;targetUserType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AD&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="nt">&quot;operationDetail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[\&quot;新建营销组件\&quot;]&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span><span class="nt">&quot;operationIp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;192.168.114.31&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">        </span><span class="nt">&quot;createTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-07-13 10:36:15&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">        </span><span class="nt">&quot;operationType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SELF_PAGE&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">        </span><span class="nt">&quot;operatorType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AD&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">        </span><span class="nt">&quot;operatorId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">205835</span><span class="w"></span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">      </span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">      </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">        </span><span class="nt">&quot;operationAction&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CREATE&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">        </span><span class="nt">&quot;targetName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;jrk&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">        </span><span class="nt">&quot;targetId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4259</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">        </span><span class="nt">&quot;targetUserId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">205835</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">        </span><span class="nt">&quot;updateTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-07-03 17:25:46&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">        </span><span class="nt">&quot;targetUserType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AD&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">        </span><span class="nt">&quot;operationDetail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[\&quot;新建站点\&quot;]&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">        </span><span class="nt">&quot;operationIp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;192.168.3.208&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">        </span><span class="nt">&quot;createTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-07-03 17:25:46&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">        </span><span class="nt">&quot;operationType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SELF_PAGE&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">        </span><span class="nt">&quot;operatorType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AD&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">        </span><span class="nt">&quot;operatorId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">205835</span><span class="w"></span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">      </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">    </span><span class="p">],</span><span class="w"></span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">    </span><span class="nt">&quot;total_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">    </span><span class="nt">&quot;total_page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">    </span><span class="nt">&quot;page_no&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">    </span><span class="nt">&quot;page_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w"></span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">  </span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SUCCESS&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<p><br/></p>
 
               
             </article>
@@ -820,7 +973,7 @@
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href="../queryEnum/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 枚举信息查询" rel="prev">
+        <a href="../queryStatementField/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 数据报表域查询" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -829,20 +982,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              枚举信息查询
+              数据报表域查询
             </div>
           </div>
         </a>
       
       
         
-        <a href="../queryTarget/" class="md-footer__link md-footer__link--next" aria-label="下一页: 定向信息查询" rel="next">
+        <a href="../queryEnum/" class="md-footer__link md-footer__link--next" aria-label="下一页: 枚举信息查询" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              定向信息查询
+              枚举信息查询
             </div>
           </div>
           <div class="md-footer__button md-icon">
