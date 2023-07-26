@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#marketing-api" class="md-skip">
+        <a href="#ximalaya-ads" class="md-skip">
           跳转至
         </a>
       
@@ -168,9 +168,56 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        关于我们
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
     <a href="." title="关于我们" class="md-nav__link md-nav__link--active">
       关于我们
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#marketing-api" class="md-nav__link">
+    Marketing API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ximalaya-ad-exchange" class="md-nav__link">
+    Ximalaya Ad-Exchange
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openrtb-api" class="md-nav__link">
+    OpenRTB API
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -185,17 +232,17 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      Marketing API接入文档
+      Marketing API
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Marketing API接入文档" data-md-level="1">
+    <nav class="md-nav" aria-label="Marketing API" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        Marketing API接入文档
+        Marketing API
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -624,6 +671,37 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#marketing-api" class="md-nav__link">
+    Marketing API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ximalaya-ad-exchange" class="md-nav__link">
+    Ximalaya Ad-Exchange
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openrtb-api" class="md-nav__link">
+    OpenRTB API
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -638,8 +716,13 @@
                   
                 
                 
-                <h1 id="marketing-api">Marketing API 简介</h1>
+                <h1 id="ximalaya-ads">Ximalaya ADS</h1>
+<h2 id="marketing-api">Marketing API</h2>
 <p>通过本篇您可以了解喜马拉雅Marketing API使用的基础知识，使用前您需要注册并申请成为开发者，接下来创建应用以获得refresh_token，当这两步都完成后，就可以向广告主申请授权，当广告主同意授权后您会获得对应的授权码，接下来使用授权码获取相应access-token就可以使用API管理账号进行Marketing API的调用了。</p>
+<h2 id="ximalaya-ad-exchange">Ximalaya Ad-Exchange</h2>
+<p>如果您是程序化的demand/buyer侧，需要获取喜马拉雅的广告请求流量，请参见<a href="https://github.com/xmlyads/adx">https://github.com/xmlyads/adx</a></p>
+<h2 id="openrtb-api">OpenRTB API</h2>
+<p>如果您是程序化的supply侧，需要获取喜马拉雅的广告预算，请查看<a href="https://xmlyads.github.io/openrtb/statements/">https://xmlyads.github.io/openrtb/statements/</a></p>
                 
               
               
