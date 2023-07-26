@@ -800,6 +800,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#5-extra" class="md-nav__link">
+    5. Extra
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1019,6 +1026,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#5-extra" class="md-nav__link">
+    5. Extra
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1044,7 +1058,7 @@
 <h2 id="_2">实时竞价接口</h2>
 <h3 id="1">1: 基本协议信息</h3>
 <p><strong>请求header:</strong></p>
-<p>SSP采用HTTP通信协议与喜马联盟广告平台交互，广告请求与相应使用protobuf(Google Protobuf)进行序列化</p>
+<p>SSP采用HTTP通信协议与喜马联盟广告平台交互，广告请求(Request)与响应(Response)使用protobuf(Google Protobuf V3)进行序列化</p>
 <table>
 <thead>
 <tr>
@@ -1062,8 +1076,8 @@
 <td>application/x-protobuf</td>
 </tr>
 <tr>
-<td>广告请求url</td>
-<td>联系喜马运营</td>
+<td>广告请求URL</td>
+<td>测试和正式域名， 请联系喜马运营</td>
 </tr>
 </tbody>
 </table>
@@ -1120,6 +1134,12 @@
 <td>App</td>
 <td>Required</td>
 <td>APP信息</td>
+</tr>
+<tr>
+<td>extra</td>
+<td>Ext</td>
+<td>Optional</td>
+<td>附加信息</td>
 </tr>
 </tbody>
 </table>
@@ -1693,6 +1713,9 @@
 </tr>
 </tbody>
 </table>
+<h3 id="5-extra">5. Extra</h3>
+<p>附加信息字段</p>
+<p>TBD</p>
                 
               
               
