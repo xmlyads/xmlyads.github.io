@@ -12,6 +12,8 @@
         <link rel="prev" href="../steps/">
       
       
+        <link rel="next" href="../enum/">
+      
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.21">
     
@@ -914,26 +916,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5:附件
-  </a>
-  
-    <nav class="md-nav" aria-label="5:附件">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51" class="md-nav__link">
-    5.1: 请求响应协议
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -943,6 +925,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enum/" class="md-nav__link">
+        附件
+      </a>
     </li>
   
 
@@ -1177,26 +1173,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    5:附件
-  </a>
-  
-    <nav class="md-nav" aria-label="5:附件">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51" class="md-nav__link">
-    5.1: 请求响应协议
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1351,13 +1327,13 @@
 <td>bid_type</td>
 <td>int32</td>
 <td>Optional</td>
-<td>出价类型, 0：cpm 1：cpc 当前仅支持cpm</td>
+<td>出价类型, 0：cpm；1：cpc；当前仅支持cpm</td>
 </tr>
 <tr>
 <td>bid_floor</td>
 <td>float</td>
 <td>Optional</td>
-<td>底价，元/千次曝光</td>
+<td>底价，分/千次曝光</td>
 </tr>
 <tr>
 <td>asset</td>
@@ -1380,9 +1356,9 @@
 <tbody>
 <tr>
 <td>template_id</td>
-<td>int</td>
+<td>string</td>
 <td>Optional</td>
-<td>广告位模版ID</td>
+<td>广告位模版ID，参见附件模版资源映射</td>
 </tr>
 <tr>
 <td>width</td>
@@ -1579,7 +1555,7 @@
 <td>MAC地址原始值</td>
 </tr>
 <tr>
-<td>mac_id</td>
+<td>mac_md5</td>
 <td>string</td>
 <td>Optional</td>
 <td>MAC地址 MD5值</td>
@@ -1652,7 +1628,7 @@
 <td>id</td>
 <td>string</td>
 <td>Required</td>
-<td>协议版本（目前为"v1.0"）</td>
+<td>响应id与BidRequest.id一致</td>
 </tr>
 <tr>
 <td>code</td>
@@ -1670,7 +1646,7 @@
 <td>seat_bid</td>
 <td>seatBid</td>
 <td>Required</td>
-<td>喜马联盟侧生成的竞价ID</td>
+<td>参与竞价的具体内容</td>
 </tr>
 </tbody>
 </table>
@@ -1732,7 +1708,7 @@
 <td>price</td>
 <td>float</td>
 <td>Required</td>
-<td>价格、单位元</td>
+<td>价格、单位分</td>
 </tr>
 <tr>
 <td>adm</td>
@@ -1756,13 +1732,13 @@
 <td>win_notice_url</td>
 <td>string</td>
 <td>Optional</td>
-<td>竞价成功通知url，需支持获胜/未获胜宏替换</td>
+<td>竞价成功通知url，支持宏替换</td>
 </tr>
 <tr>
 <td>loss_notice_url</td>
 <td>string</td>
 <td>Optional</td>
-<td>竞价成功通知url，需支持获胜/未获胜宏替换</td>
+<td>竞价失败通知url，支持宏替换</td>
 </tr>
 </tbody>
 </table>
@@ -1959,7 +1935,7 @@
 </tr>
 <tr>
 <td>点击区域</td>
-<td><code>__upX__</code>, <code>__upY__</code>, <code>__downX__</code>, <code>__downY__</code></td>
+<td><code>__DOWNX__</code>, <code>__UPY__</code>, <code>__DOWNX__</code>, <code>__DOWNY__</code></td>
 <td>点击坐标单位为像素、数值为素材图片左上角为起点的X和Y轴 <code>__DOWN_X__</code>：用户手指按下时的横坐标 <code>__DOWN_Y__</code>：用户手指按下时的纵坐标 <code>__UP_X__</code>：用户手指离开设备屏幕时的横坐标（目前上报的值=按下的横坐标）<code>__UP_Y__</code>：用户手指离开设备屏幕时的纵坐标（目前上报的值=按下的纵坐标）</td>
 </tr>
 <tr>
@@ -1974,146 +1950,6 @@
 </tr>
 </tbody>
 </table>
-<h3 id="5">5:附件</h3>
-<h4 id="51">5.1: 请求响应协议</h4>
-<div class="highlight"><pre><span></span><code><span class="k">syntax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;proto3&quot;</span><span class="p">;</span>
-
-<span class="kn">package</span><span class="w"> </span><span class="nn">com</span><span class="o">.</span><span class="n">ximalaya.bidding</span><span class="p">;</span>
-
-<span class="k">option</span><span class="w"> </span><span class="na">java_outer_classname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;XimalayaBidding&quot;</span><span class="p">;</span>
-
-<span class="kd">message</span><span class="w"> </span><span class="nc">BidRequest</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="na">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 本次请求的唯一id</span>
-<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="na">api_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">//协议版本（目前为&quot;v1.0&quot;）</span>
-<span class="w">    </span><span class="k">repeated</span><span class="w"> </span><span class="n">Imp</span><span class="w"> </span><span class="na">imp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 曝光机会列表</span>
-<span class="w">    </span><span class="n">App</span><span class="w"> </span><span class="na">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c1">// APP信息</span>
-<span class="w">    </span><span class="n">Device</span><span class="w"> </span><span class="na">device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// 设备信息</span>
-<span class="w">    </span><span class="n">User</span><span class="w"> </span><span class="na">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="c1">// 设备信息</span>
-<span class="w">    </span><span class="n">Geo</span><span class="w"> </span><span class="na">geo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// 交易信息</span>
-<span class="w">    </span><span class="n">Pmp</span><span class="w"> </span><span class="na">pmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="c1">// 交易信息</span>
-<span class="w">    </span><span class="kt">uint32</span><span class="w"> </span><span class="na">timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="c1">// 请求预留的时间，单位为ms</span>
-<span class="w">    </span><span class="n">Ext</span><span class="w"> </span><span class="na">ext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// 扩展参数</span>
-
-<span class="w">    </span><span class="kd">message</span><span class="w"> </span><span class="nc">Imp</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 标识唯一一次曝光机会</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">tag_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 广告位ID</span>
-<span class="w">        </span><span class="kt">int32</span><span class="w"> </span><span class="na">ad_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 广告类型（1:开屏、2：信息流、3：激励视频、4：贴片、5：banner）</span>
-<span class="w">        </span><span class="kt">int32</span><span class="w"> </span><span class="na">bid_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c1">// 出价类型, 0：cpm 1：cpc 当前仅支持cpm</span>
-<span class="w">        </span><span class="kt">int64</span><span class="w"> </span><span class="na">bid_floor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// 底价，元/千次曝光</span>
-<span class="w">        </span><span class="k">repeated</span><span class="w"> </span><span class="n">Asset</span><span class="w"> </span><span class="na">asset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="c1">// 模版信息，详见模版资源映射表</span>
-<span class="w">        </span><span class="kd">message</span><span class="w"> </span><span class="nc">Asset</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="na">template_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">//  广告位模版ID, 详见模版资源映射表</span>
-<span class="w">            </span><span class="kt">int32</span><span class="w"> </span><span class="na">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 广告位模版宽度</span>
-<span class="w">            </span><span class="kt">int32</span><span class="w"> </span><span class="na">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 广告位模版高度</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">message</span><span class="w"> </span><span class="nc">App</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 应用名称：例如：喜马拉雅FM</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">bundle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 应用程序包名：例如：com.ximalaya.iting</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 应用版本号: 例如: 8.0.1</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">message</span><span class="w"> </span><span class="nc">Device</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">ua</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// UA信息</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">ip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 用户设备ip</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">device_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 设备类型（0：Android；1：iOS;2：IPAD;3：androidPad）</span>
-<span class="w">        </span><span class="kt">int32</span><span class="w"> </span><span class="na">carrier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c1">// 运营商（0：移动；1：联通;2：电信；3：其它）</span>
-<span class="w">        </span><span class="kt">int32</span><span class="w"> </span><span class="na">net</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">//网络连接类型（0：2G；1：3G；2：4G；3：5G；4：wifi；6：其他）</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">make</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="c1">// 手机品牌，如：iPhone，Xiaomi</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// 手机型号，如：iPhoneX, KNT-AL10</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">os</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="c1">// 操作系统名称（iOS, Android等）</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">osv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="c1">//  操作系统版本</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">idfa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// IDFA原始值</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">idfa_md5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span><span class="w"> </span><span class="c1">// IDFA MD5值</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">oaid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="w"> </span><span class="c1">// Android OAID原始值</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">oaid_md5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span><span class="w"> </span><span class="c1">// Android OAID MD5值</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">imei</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">14</span><span class="p">;</span><span class="w"> </span><span class="c1">// Android IMEI原始值</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">imei_md5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span><span class="w"> </span><span class="c1">// Android IMEI MD5值</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">android_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span><span class="p">;</span><span class="w"> </span><span class="c1">// Android Id原始值</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">android_id_md5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">;</span><span class="w"> </span><span class="c1">// Android Id MD5值</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">mac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span><span class="w"> </span><span class="c1">// MAC地址原始值</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">mac_md5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">19</span><span class="p">;</span><span class="w"> </span><span class="c1">// MAC地址MD5值，加密前先去除分隔符&#39;:&#39;</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">caid_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"> </span><span class="c1">// caid版本</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">caid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">21</span><span class="p">;</span><span class="w"> </span><span class="c1">// caid原始值</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">caid_md5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">22</span><span class="p">;</span><span class="w"> </span><span class="c1">// caid md5值</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">message</span><span class="w"> </span><span class="nc">User</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// [保留字段] 用户唯一标识</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">app_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 用户已安装app列表</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">message</span><span class="w"> </span><span class="nc">Geo</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kt">int32</span><span class="w"> </span><span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 经纬度有值时必传，坐标系类型 0:GCJ-02; 1:WGS-84; 2:bd09ll</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">lat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 维度</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">lon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 经度</span>
-
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">message</span><span class="w"> </span><span class="nc">Pmp</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">deal_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 直接交易的唯一ID</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">message</span><span class="w"> </span><span class="nc">Ext</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">map</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">&gt;</span><span class="w"> </span><span class="na">extra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">message</span><span class="w"> </span><span class="nc">BidResponse</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="na">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 请求ID，需与BidRequest.id一致</span>
-<span class="w">    </span><span class="kt">int32</span><span class="w"> </span><span class="na">code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 广告响应状态码</span>
-<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="na">bid_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 喜马联盟侧生成的竞价ID</span>
-<span class="w">    </span><span class="k">repeated</span><span class="w"> </span><span class="n">SeatBid</span><span class="w"> </span><span class="na">seat_bid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c1">//喜马联盟侧生成的竞价信息，目前只有一个</span>
-
-<span class="w">    </span><span class="kd">message</span><span class="w"> </span><span class="nc">SeatBid</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">repeated</span><span class="w"> </span><span class="n">Bid</span><span class="w"> </span><span class="na">bid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// DSP参与竞价的位置，与BidRequest.imp对应，每个imp最多只可返回一个bid</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">message</span><span class="w"> </span><span class="nc">Bid</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// dsp侧针对这次竞价的ID</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">imp_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 曝光ID，对应BidRequest.imp.id，必填</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">ad_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 广告id</span>
-<span class="w">        </span><span class="kt">int64</span><span class="w"> </span><span class="na">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c1">// DSP出价，单位：分/千次曝光</span>
-<span class="w">        </span><span class="k">repeated</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="na">win_notice_url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// 竞价成功通知地址</span>
-<span class="w">        </span><span class="k">repeated</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="na">loss_notice_url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="c1">// 可选。竞价失败通知的url列表</span>
-<span class="w">        </span><span class="k">repeated</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="na">imp_trackers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// 曝光监测地址</span>
-<span class="w">        </span><span class="k">repeated</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="na">clk_trackers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="c1">// 点击监测地址</span>
-<span class="w">        </span><span class="n">Adm</span><span class="w"> </span><span class="na">adm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="c1">// 创意物料信息</span>
-<span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="na">deal_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// 直接交易的唯一ID</span>
-
-<span class="w">        </span><span class="c1">//物料信息</span>
-<span class="w">        </span><span class="kd">message</span><span class="w"> </span><span class="nc">Adm</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="na">template_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 模版ID</span>
-<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="na">creative_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 可选。广告物料的唯一标识</span>
-<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="na">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 标题</span>
-<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="na">desc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c1">// 描述</span>
-<span class="w">            </span><span class="k">repeated</span><span class="w"> </span><span class="n">Image</span><span class="w"> </span><span class="na">image</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// 图片信息</span>
-<span class="w">            </span><span class="n">Video</span><span class="w"> </span><span class="na">video</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="c1">// 视频信息</span>
-<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="na">deep_link</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// 客户端优先跳转deeplink链接,其次跳转普通网址类或应用下载类的落地页</span>
-<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="na">link</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="c1">// 落地页url</span>
-<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="na">download_url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="c1">// 应用下载必填。应用下载url</span>
-<span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="na">app_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// 针对应用下载类广告</span>
-
-<span class="w">            </span><span class="kd">message</span><span class="w"> </span><span class="nc">Image</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="kt">string</span><span class="w"> </span><span class="na">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 图片URL</span>
-<span class="w">                </span><span class="kt">int32</span><span class="w"> </span><span class="na">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 图片宽度</span>
-<span class="w">                </span><span class="kt">int32</span><span class="w"> </span><span class="na">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 图片高度</span>
-<span class="w">                </span><span class="kt">string</span><span class="w"> </span><span class="na">mime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c1">// 图片类型， 如：JPG/JPEG/PNG</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">            </span><span class="kd">message</span><span class="w"> </span><span class="nc">Video</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="kt">string</span><span class="w"> </span><span class="na">video_url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 视频URL</span>
-<span class="w">                </span><span class="kt">int32</span><span class="w"> </span><span class="na">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 视频宽度</span>
-<span class="w">                </span><span class="kt">int32</span><span class="w"> </span><span class="na">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// 视频高度</span>
-<span class="w">                </span><span class="kt">int32</span><span class="w"> </span><span class="na">duration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c1">// 视频素材的播放时长，单位：秒</span>
-<span class="w">                </span><span class="kt">int32</span><span class="w"> </span><span class="na">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// 视频文件的大小，单位Byte</span>
-<span class="w">                </span><span class="kt">string</span><span class="w"> </span><span class="na">mime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="c1">// 视频素材类型，以MIME类型表示</span>
-<span class="w">                </span><span class="kt">string</span><span class="w"> </span><span class="na">cover</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// 视频封面图</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
 
 
 
