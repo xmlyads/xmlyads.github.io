@@ -1,0 +1,937 @@
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.0">
+    
+    
+      
+        <title>协议文件 - 喜马拉雅Ads</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.b5d04df8.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9ab2c1f8.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ff7043">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#protobuf" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="喜马拉雅Ads" class="md-header-nav__button md-logo" aria-label="喜马拉雅Ads">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            喜马拉雅Ads
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              协议文件
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="喜马拉雅Ads" class="md-nav__button md-logo" aria-label="喜马拉雅Ads">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    喜马拉雅Ads
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="关于我们" class="md-nav__link">
+      关于我们
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Marketing API
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Marketing API" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Marketing API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      快速开始
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="快速开始" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        快速开始
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/start/" title="从这里开始" class="md-nav__link">
+      从这里开始
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/accessToken/" title="刷新Access_Token" class="md-nav__link">
+      刷新Access_Token
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/queryDevInfo/" title="授权信息查询" class="md-nav__link">
+      授权信息查询
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      广告投放
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="广告投放" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        广告投放
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/queryCampaign/" title="广告计划查询" class="md-nav__link">
+      广告计划查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/queryAd/" title="广告单元查询" class="md-nav__link">
+      广告单元查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/queryCreative/" title="广告创意查询" class="md-nav__link">
+      广告创意查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/querySegment/" title="广告素材查询" class="md-nav__link">
+      广告素材查询
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      数据报表
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="数据报表" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        数据报表
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/statement/" title="数据报表查询" class="md-nav__link">
+      数据报表查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/queryStatementField/" title="数据报表域查询" class="md-nav__link">
+      数据报表域查询
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      系统管理
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="系统管理" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        系统管理
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/queryEnum/" title="枚举信息查询" class="md-nav__link">
+      枚举信息查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/queryOneEnum/" title="枚举信息精确查询" class="md-nav__link">
+      枚举信息精确查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/queryTarget/" title="定向信息查询" class="md-nav__link">
+      定向信息查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/queryProvince/" title="地域信息查询" class="md-nav__link">
+      地域信息查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/approvalLanch/" title="账户权限申请" class="md-nav__link">
+      账户权限申请
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/errorCode/" title="错误码" class="md-nav__link">
+      错误码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/versionCode/" title="版本说明" class="md-nav__link">
+      版本说明
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/reg/" title="注册" class="md-nav__link">
+      注册
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../xmadx/" title="Ad-Exchange" class="md-nav__link">
+      Ad-Exchange
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      OpenRTB API
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="OpenRTB API" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        OpenRTB API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../statements/" title="基本说明" class="md-nav__link">
+      基本说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../steps/" title="商务流程" class="md-nav__link">
+      商务流程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../protocol/" title="技术协议" class="md-nav__link">
+      技术协议
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        协议文件
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="协议文件" class="md-nav__link md-nav__link--active">
+      协议文件
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1: 请求响应协议
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../enum/" title="枚举映射" class="md-nav__link">
+      枚举映射
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1: 请求响应协议
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="protobuf">ProtoBuf 文件内容</h1>
+<h2 id="1">1: 请求响应协议</h2>
+<div class="highlight"><pre><span></span><code><span class="na">syntax</span> <span class="o">=</span> <span class="s">&quot;proto3&quot;</span><span class="p">;</span>
+
+<span class="kn">package</span> <span class="nn">com</span><span class="o">.</span><span class="n">ximalaya.bidding</span><span class="p">;</span>
+
+<span class="k">option</span> <span class="na">java_outer_classname</span> <span class="o">=</span> <span class="s">&quot;XimalayaBidding&quot;</span><span class="p">;</span>
+
+<span class="kd">message</span> <span class="nc">BidRequest</span> <span class="p">{</span>
+    <span class="kt">string</span> <span class="na">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// 本次请求的唯一id</span>
+    <span class="kt">string</span> <span class="na">api_version</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">//协议版本（目前为&quot;v1.0&quot;）</span>
+    <span class="k">repeated</span> <span class="n">Imp</span> <span class="na">imp</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// 曝光机会列表</span>
+    <span class="n">App</span> <span class="na">app</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="c1">// APP信息</span>
+    <span class="n">Device</span> <span class="na">device</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// 设备信息</span>
+    <span class="n">User</span> <span class="na">user</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span> <span class="c1">// 设备信息</span>
+    <span class="n">Geo</span> <span class="na">geo</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span> <span class="c1">// 交易信息</span>
+    <span class="n">Pmp</span> <span class="na">pmp</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span> <span class="c1">// 交易信息</span>
+    <span class="kt">uint32</span> <span class="na">timeout</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span> <span class="c1">// 请求预留的时间，单位为ms</span>
+    <span class="n">Ext</span> <span class="na">ext</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">// 扩展参数</span>
+
+    <span class="kd">message</span> <span class="nc">Imp</span> <span class="p">{</span>
+        <span class="kt">string</span> <span class="na">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// 标识唯一一次曝光机会</span>
+        <span class="kt">string</span> <span class="na">tag_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// 广告位ID</span>
+        <span class="kt">int32</span> <span class="na">ad_type</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// 广告类型（1:开屏、2：信息流、3：激励视频、4：贴片、5：banner）</span>
+        <span class="kt">int32</span> <span class="na">bid_type</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="c1">// 出价类型, 0：cpm 1：cpc 当前仅支持cpm</span>
+        <span class="kt">int64</span> <span class="na">bid_floor</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// 底价，分/千次曝光</span>
+        <span class="k">repeated</span> <span class="n">Asset</span> <span class="na">asset</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span> <span class="c1">// 模版信息，详见模版资源映射表</span>
+        <span class="kd">message</span> <span class="nc">Asset</span> <span class="p">{</span>
+            <span class="kt">string</span> <span class="na">template_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">//  广告位模版ID, 详见模版资源映射表</span>
+            <span class="kt">int32</span> <span class="na">width</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// 广告位模版宽度</span>
+            <span class="kt">int32</span> <span class="na">height</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// 广告位模版高度</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">message</span> <span class="nc">App</span> <span class="p">{</span>
+        <span class="kt">string</span> <span class="na">name</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// 应用名称：例如：喜马拉雅FM</span>
+        <span class="kt">string</span> <span class="na">bundle</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// 应用程序包名：例如：com.ximalaya.iting</span>
+        <span class="kt">string</span> <span class="na">version</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// 应用版本号: 例如: 8.0.1</span>
+    <span class="p">}</span>
+
+    <span class="kd">message</span> <span class="nc">Device</span> <span class="p">{</span>
+        <span class="kt">string</span> <span class="na">ua</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// UA信息</span>
+        <span class="kt">string</span> <span class="na">ip</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// 用户设备ip</span>
+        <span class="kt">string</span> <span class="na">device_type</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// 设备类型（0：Android；1：iOS;2：IPAD;3：androidPad）</span>
+        <span class="kt">int32</span> <span class="na">carrier</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="c1">// 运营商（0：移动；1：联通;2：电信；3：其它）</span>
+        <span class="kt">int32</span> <span class="na">net</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">//网络连接类型（0：2G；1：3G；2：4G；3：5G；4：wifi；6：其他）</span>
+        <span class="kt">string</span> <span class="na">make</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span> <span class="c1">// 手机品牌，如：iPhone，Xiaomi</span>
+        <span class="kt">string</span> <span class="na">model</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span> <span class="c1">// 手机型号，如：iPhoneX, KNT-AL10</span>
+        <span class="kt">string</span> <span class="na">os</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span> <span class="c1">// 操作系统名称（iOS, Android等）</span>
+        <span class="kt">string</span> <span class="na">osv</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span> <span class="c1">//  操作系统版本</span>
+        <span class="kt">string</span> <span class="na">idfa</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">// IDFA原始值</span>
+        <span class="kt">string</span> <span class="na">idfa_md5</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span> <span class="c1">// IDFA MD5值</span>
+        <span class="kt">string</span> <span class="na">oaid</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span> <span class="c1">// Android OAID原始值</span>
+        <span class="kt">string</span> <span class="na">oaid_md5</span> <span class="o">=</span> <span class="mi">13</span><span class="p">;</span> <span class="c1">// Android OAID MD5值</span>
+        <span class="kt">string</span> <span class="na">imei</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span> <span class="c1">// Android IMEI原始值</span>
+        <span class="kt">string</span> <span class="na">imei_md5</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span> <span class="c1">// Android IMEI MD5值</span>
+        <span class="kt">string</span> <span class="na">android_id</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span> <span class="c1">// Android Id原始值</span>
+        <span class="kt">string</span> <span class="na">android_id_md5</span> <span class="o">=</span> <span class="mi">17</span><span class="p">;</span> <span class="c1">// Android Id MD5值</span>
+        <span class="kt">string</span> <span class="na">mac</span> <span class="o">=</span> <span class="mi">18</span><span class="p">;</span> <span class="c1">// MAC地址原始值</span>
+        <span class="kt">string</span> <span class="na">mac_md5</span> <span class="o">=</span> <span class="mi">19</span><span class="p">;</span> <span class="c1">// MAC地址MD5值，加密前先去除分隔符&#39;:&#39;</span>
+        <span class="kt">string</span> <span class="na">caid_version</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="c1">// caid版本</span>
+        <span class="kt">string</span> <span class="na">caid</span> <span class="o">=</span> <span class="mi">21</span><span class="p">;</span> <span class="c1">// caid原始值</span>
+        <span class="kt">string</span> <span class="na">caid_md5</span> <span class="o">=</span> <span class="mi">22</span><span class="p">;</span> <span class="c1">// caid md5值</span>
+    <span class="p">}</span>
+
+    <span class="kd">message</span> <span class="nc">User</span> <span class="p">{</span>
+        <span class="kt">string</span> <span class="na">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// [保留字段] 用户唯一标识</span>
+        <span class="kt">string</span> <span class="na">app_list</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// 用户已安装app列表</span>
+    <span class="p">}</span>
+
+    <span class="kd">message</span> <span class="nc">Geo</span> <span class="p">{</span>
+        <span class="kt">int32</span> <span class="na">type</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// 经纬度有值时必传，坐标系类型 0:GCJ-02; 1:WGS-84; 2:bd09ll</span>
+        <span class="kt">string</span> <span class="na">lat</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// 维度</span>
+        <span class="kt">string</span> <span class="na">lon</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// 经度</span>
+
+    <span class="p">}</span>
+
+    <span class="kd">message</span> <span class="nc">Pmp</span> <span class="p">{</span>
+        <span class="kt">string</span> <span class="na">deal_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// 直接交易的唯一ID</span>
+    <span class="p">}</span>
+
+    <span class="kd">message</span> <span class="nc">Ext</span> <span class="p">{</span>
+        <span class="n">map</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="na">extra</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">message</span> <span class="nc">BidResponse</span> <span class="p">{</span>
+    <span class="kt">string</span> <span class="na">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// 请求ID，需与BidRequest.id一致</span>
+    <span class="kt">int32</span> <span class="na">code</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// 广告响应状态码</span>
+    <span class="kt">string</span> <span class="na">bid_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// 喜马联盟侧生成的竞价ID</span>
+    <span class="k">repeated</span> <span class="n">SeatBid</span> <span class="na">seat_bid</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="c1">//喜马联盟侧生成的竞价信息，目前只有一个</span>
+
+    <span class="kd">message</span> <span class="nc">SeatBid</span> <span class="p">{</span>
+        <span class="k">repeated</span> <span class="n">Bid</span> <span class="na">bid</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// DSP参与竞价的位置，与BidRequest.imp对应，每个imp最多只可返回一个bid</span>
+    <span class="p">}</span>
+
+    <span class="kd">message</span> <span class="nc">Bid</span> <span class="p">{</span>
+        <span class="kt">string</span> <span class="na">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// dsp侧针对这次竞价的ID</span>
+        <span class="kt">string</span> <span class="na">imp_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// 曝光ID，对应BidRequest.imp.id，必填</span>
+        <span class="kt">string</span> <span class="na">ad_id</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// 广告id</span>
+        <span class="kt">int64</span> <span class="na">price</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="c1">// DSP出价，单位：分/千次曝光</span>
+        <span class="k">repeated</span> <span class="kt">string</span> <span class="na">win_notice_url</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// 竞价成功通知地址</span>
+        <span class="k">repeated</span> <span class="kt">string</span> <span class="na">loss_notice_url</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span> <span class="c1">// 可选。竞价失败通知的url列表</span>
+        <span class="k">repeated</span> <span class="kt">string</span> <span class="na">imp_trackers</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span> <span class="c1">// 曝光监测地址</span>
+        <span class="k">repeated</span> <span class="kt">string</span> <span class="na">clk_trackers</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span> <span class="c1">// 点击监测地址</span>
+        <span class="n">Adm</span> <span class="na">adm</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span> <span class="c1">// 创意物料信息</span>
+        <span class="kt">string</span> <span class="na">deal_id</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">// 直接交易的唯一ID</span>
+
+        <span class="c1">//物料信息</span>
+        <span class="kd">message</span> <span class="nc">Adm</span> <span class="p">{</span>
+            <span class="kt">string</span> <span class="na">template_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// 模版ID</span>
+            <span class="kt">string</span> <span class="na">creative_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// 可选。广告物料的唯一标识</span>
+            <span class="kt">string</span> <span class="na">title</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// 标题</span>
+            <span class="kt">string</span> <span class="na">desc</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="c1">// 描述</span>
+            <span class="k">repeated</span> <span class="n">Image</span> <span class="na">image</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// 图片信息</span>
+            <span class="n">Video</span> <span class="na">video</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span> <span class="c1">// 视频信息</span>
+            <span class="kt">string</span> <span class="na">deep_link</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span> <span class="c1">// 客户端优先跳转deeplink链接,其次跳转普通网址类或应用下载类的落地页</span>
+            <span class="kt">string</span> <span class="na">link</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span> <span class="c1">// 落地页url</span>
+            <span class="kt">string</span> <span class="na">download_url</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span> <span class="c1">// 应用下载必填。应用下载url</span>
+            <span class="kt">string</span> <span class="na">app_name</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">// 针对应用下载类广告</span>
+
+            <span class="kd">message</span> <span class="nc">Image</span> <span class="p">{</span>
+                <span class="kt">string</span> <span class="na">url</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// 图片URL</span>
+                <span class="kt">int32</span> <span class="na">width</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// 图片宽度</span>
+                <span class="kt">int32</span> <span class="na">height</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// 图片高度</span>
+                <span class="kt">string</span> <span class="na">mime</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="c1">// 图片类型， 如：JPG/JPEG/PNG</span>
+            <span class="p">}</span>
+            <span class="kd">message</span> <span class="nc">Video</span> <span class="p">{</span>
+                <span class="kt">string</span> <span class="na">video_url</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// 视频URL</span>
+                <span class="kt">int32</span> <span class="na">width</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// 视频宽度</span>
+                <span class="kt">int32</span> <span class="na">height</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// 视频高度</span>
+                <span class="kt">int32</span> <span class="na">duration</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="c1">// 视频素材的播放时长，单位：秒</span>
+                <span class="kt">int32</span> <span class="na">size</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// 视频文件的大小，单位Byte</span>
+                <span class="kt">string</span> <span class="na">mime</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span> <span class="c1">// 视频素材类型，以MIME类型表示</span>
+                <span class="kt">string</span> <span class="na">cover</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span> <span class="c1">// 视频封面图</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../protocol/" title="技术协议" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                技术协议
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../enum/" title="枚举映射" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                枚举映射
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.92ffa368.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5123e3d4.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
