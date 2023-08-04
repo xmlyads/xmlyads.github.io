@@ -802,17 +802,15 @@
         <span class="k">optional</span> <span class="kt">string</span> <span class="na">miui_version</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span> <span class="c1">// 小米系统版本，miui系统必填</span>
 
         <span class="k">optional</span> <span class="kt">string</span> <span class="na">boot_ts</span> <span class="o">=</span> <span class="mi">26</span><span class="p">;</span> <span class="c1">// 设备启动时间</span>
-        <span class="k">optional</span> <span class="kt">string</span> <span class="na">boot_mark</span> <span class="o">=</span> <span class="mi">27</span><span class="p">;</span> <span class="c1">// 系统启动标识</span>
-        <span class="k">optional</span> <span class="kt">string</span> <span class="na">update_ts</span> <span class="o">=</span> <span class="mi">28</span><span class="p">;</span> <span class="c1">// 设备系统更新时间</span>
-        <span class="k">optional</span> <span class="kt">string</span> <span class="na">update_mark</span> <span class="o">=</span> <span class="mi">29</span><span class="p">;</span> <span class="c1">// 系统更新标识</span>
+        <span class="k">optional</span> <span class="kt">string</span> <span class="na">update_ts</span> <span class="o">=</span> <span class="mi">27</span><span class="p">;</span> <span class="c1">// 设备系统更新时间</span>
 
         <span class="c1">// @exclude iOS Criteria</span>
 
-        <span class="k">optional</span> <span class="kt">string</span> <span class="na">idfa</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span> <span class="c1">// IDFA原始值明文</span>
-        <span class="k">optional</span> <span class="kt">string</span> <span class="na">idfa_md5</span> <span class="o">=</span> <span class="mi">31</span><span class="p">;</span> <span class="c1">// IDFA MD5, 小写</span>
-        <span class="k">repeated</span> <span class="n">Caid</span> <span class="na">caid</span> <span class="o">=</span> <span class="mi">32</span><span class="p">;</span> <span class="c1">// CAID 对象数组</span>
+        <span class="k">optional</span> <span class="kt">string</span> <span class="na">idfa</span> <span class="o">=</span> <span class="mi">28</span><span class="p">;</span> <span class="c1">// IDFA原始值明文</span>
+        <span class="k">optional</span> <span class="kt">string</span> <span class="na">idfa_md5</span> <span class="o">=</span> <span class="mi">29</span><span class="p">;</span> <span class="c1">// IDFA MD5, 小写</span>
+        <span class="k">repeated</span> <span class="n">Caid</span> <span class="na">caid</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span> <span class="c1">// CAID 对象数组</span>
 
-        <span class="k">optional</span> <span class="n">CAIDCriteria</span> <span class="na">caid_criteria</span> <span class="o">=</span> <span class="mi">33</span><span class="p">;</span> <span class="c1">// caid相关参数</span>
+        <span class="k">optional</span> <span class="n">CAIDCriteria</span> <span class="na">caid_criteria</span> <span class="o">=</span> <span class="mi">31</span><span class="p">;</span> <span class="c1">// caid相关参数</span>
 
         <span class="kd">message</span> <span class="nc">CAIDCriteria</span> <span class="p">{</span>
             <span class="kt">string</span> <span class="na">caid_boot_sec</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// 设备启动时间 UnixTimestamp eg: 1691052221</span>
