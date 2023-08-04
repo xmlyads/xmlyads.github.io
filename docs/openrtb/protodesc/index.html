@@ -1,0 +1,2283 @@
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.0">
+    
+    
+      
+        <title>接口格式 - 喜马拉雅Ads</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.b5d04df8.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9ab2c1f8.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ff7043">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#xmly-openrtb-protocol" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="喜马拉雅Ads" class="md-header-nav__button md-logo" aria-label="喜马拉雅Ads">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            喜马拉雅Ads
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              接口格式
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="喜马拉雅Ads" class="md-nav__button md-logo" aria-label="喜马拉雅Ads">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    喜马拉雅Ads
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="关于我们" class="md-nav__link">
+      关于我们
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Marketing API
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Marketing API" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Marketing API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      快速开始
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="快速开始" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        快速开始
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/start/" title="从这里开始" class="md-nav__link">
+      从这里开始
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/accessToken/" title="刷新Access_Token" class="md-nav__link">
+      刷新Access_Token
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/queryDevInfo/" title="授权信息查询" class="md-nav__link">
+      授权信息查询
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      广告投放
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="广告投放" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        广告投放
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/queryCampaign/" title="广告计划查询" class="md-nav__link">
+      广告计划查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/queryAd/" title="广告单元查询" class="md-nav__link">
+      广告单元查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/queryCreative/" title="广告创意查询" class="md-nav__link">
+      广告创意查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/querySegment/" title="广告素材查询" class="md-nav__link">
+      广告素材查询
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      数据报表
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="数据报表" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        数据报表
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/statement/" title="数据报表查询" class="md-nav__link">
+      数据报表查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/queryStatementField/" title="数据报表域查询" class="md-nav__link">
+      数据报表域查询
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      系统管理
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="系统管理" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        系统管理
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/queryEnum/" title="枚举信息查询" class="md-nav__link">
+      枚举信息查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/queryOneEnum/" title="枚举信息精确查询" class="md-nav__link">
+      枚举信息精确查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/queryTarget/" title="定向信息查询" class="md-nav__link">
+      定向信息查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/queryProvince/" title="地域信息查询" class="md-nav__link">
+      地域信息查询
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/approvalLanch/" title="账户权限申请" class="md-nav__link">
+      账户权限申请
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/errorCode/" title="错误码" class="md-nav__link">
+      错误码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/versionCode/" title="版本说明" class="md-nav__link">
+      版本说明
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mktapi/reg/" title="注册" class="md-nav__link">
+      注册
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../xmadx/" title="Ad-Exchange" class="md-nav__link">
+      Ad-Exchange
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      OpenRTB API
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="OpenRTB API" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        OpenRTB API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../statements/" title="基本说明" class="md-nav__link">
+      基本说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../steps/" title="商务流程" class="md-nav__link">
+      商务流程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../protocol/" title="技术接口" class="md-nav__link">
+      技术接口
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        接口格式
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="接口格式" class="md-nav__link md-nav__link--active">
+      接口格式
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xmopenrtbproto" class="md-nav__link">
+    xmopenrtb.proto
+  </a>
+  
+    <nav class="md-nav" aria-label="xmopenrtb.proto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bidrequest" class="md-nav__link">
+    BidRequest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestapp" class="md-nav__link">
+    BidRequest.App
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestcaid" class="md-nav__link">
+    BidRequest.Caid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestdevice" class="md-nav__link">
+    BidRequest.Device
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestdevicecaidcriteria" class="md-nav__link">
+    BidRequest.Device.CAIDCriteria
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestext" class="md-nav__link">
+    BidRequest.Ext
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestextextraentry" class="md-nav__link">
+    BidRequest.Ext.ExtraEntry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestgeo" class="md-nav__link">
+    BidRequest.Geo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestimp" class="md-nav__link">
+    BidRequest.Imp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestimpasset" class="md-nav__link">
+    BidRequest.Imp.Asset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestpmp" class="md-nav__link">
+    BidRequest.Pmp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestuser" class="md-nav__link">
+    BidRequest.User
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidresponse" class="md-nav__link">
+    BidResponse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidresponsebid" class="md-nav__link">
+    BidResponse.Bid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidresponsebidadm" class="md-nav__link">
+    BidResponse.Bid.Adm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidresponsebidadmimage" class="md-nav__link">
+    BidResponse.Bid.Adm.Image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidresponsebidadmvideo" class="md-nav__link">
+    BidResponse.Bid.Adm.Video
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidresponseseatbid" class="md-nav__link">
+    BidResponse.SeatBid
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scalar-value-types" class="md-nav__link">
+    Scalar Value Types
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../protofile/" title="协议文件" class="md-nav__link">
+      协议文件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../enum/" title="枚举映射" class="md-nav__link">
+      枚举映射
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xmopenrtbproto" class="md-nav__link">
+    xmopenrtb.proto
+  </a>
+  
+    <nav class="md-nav" aria-label="xmopenrtb.proto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bidrequest" class="md-nav__link">
+    BidRequest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestapp" class="md-nav__link">
+    BidRequest.App
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestcaid" class="md-nav__link">
+    BidRequest.Caid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestdevice" class="md-nav__link">
+    BidRequest.Device
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestdevicecaidcriteria" class="md-nav__link">
+    BidRequest.Device.CAIDCriteria
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestext" class="md-nav__link">
+    BidRequest.Ext
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestextextraentry" class="md-nav__link">
+    BidRequest.Ext.ExtraEntry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestgeo" class="md-nav__link">
+    BidRequest.Geo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestimp" class="md-nav__link">
+    BidRequest.Imp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestimpasset" class="md-nav__link">
+    BidRequest.Imp.Asset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestpmp" class="md-nav__link">
+    BidRequest.Pmp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidrequestuser" class="md-nav__link">
+    BidRequest.User
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidresponse" class="md-nav__link">
+    BidResponse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidresponsebid" class="md-nav__link">
+    BidResponse.Bid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidresponsebidadm" class="md-nav__link">
+    BidResponse.Bid.Adm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidresponsebidadmimage" class="md-nav__link">
+    BidResponse.Bid.Adm.Image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidresponsebidadmvideo" class="md-nav__link">
+    BidResponse.Bid.Adm.Video
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bidresponseseatbid" class="md-nav__link">
+    BidResponse.SeatBid
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scalar-value-types" class="md-nav__link">
+    Scalar Value Types
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="xmly-openrtb-protocol">XMLY OpenRTB Protocol</h1>
+<p><a name="top"></a></p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li>
+<p><a href="#xmopenrtb-proto">xmopenrtb.proto</a></p>
+<ul>
+<li><a href="#com-ximalaya-bidding-BidRequest">BidRequest</a></li>
+<li><a href="#com-ximalaya-bidding-BidRequest-App">BidRequest.App</a></li>
+<li><a href="#com-ximalaya-bidding-BidRequest-Caid">BidRequest.Caid</a></li>
+<li><a href="#com-ximalaya-bidding-BidRequest-Device">BidRequest.Device</a></li>
+<li><a href="#com-ximalaya-bidding-BidRequest-Device-CAIDCriteria">BidRequest.Device.CAIDCriteria</a></li>
+<li><a href="#com-ximalaya-bidding-BidRequest-Ext">BidRequest.Ext</a></li>
+<li><a href="#com-ximalaya-bidding-BidRequest-Ext-ExtraEntry">BidRequest.Ext.ExtraEntry</a></li>
+<li><a href="#com-ximalaya-bidding-BidRequest-Geo">BidRequest.Geo</a></li>
+<li><a href="#com-ximalaya-bidding-BidRequest-Imp">BidRequest.Imp</a></li>
+<li><a href="#com-ximalaya-bidding-BidRequest-Imp-Asset">BidRequest.Imp.Asset</a></li>
+<li><a href="#com-ximalaya-bidding-BidRequest-Pmp">BidRequest.Pmp</a></li>
+<li><a href="#com-ximalaya-bidding-BidRequest-User">BidRequest.User</a></li>
+<li><a href="#com-ximalaya-bidding-BidResponse">BidResponse</a></li>
+<li><a href="#com-ximalaya-bidding-BidResponse-Bid">BidResponse.Bid</a></li>
+<li><a href="#com-ximalaya-bidding-BidResponse-Bid-Adm">BidResponse.Bid.Adm</a></li>
+<li><a href="#com-ximalaya-bidding-BidResponse-Bid-Adm-Image">BidResponse.Bid.Adm.Image</a></li>
+<li><a href="#com-ximalaya-bidding-BidResponse-Bid-Adm-Video">BidResponse.Bid.Adm.Video</a></li>
+<li><a href="#com-ximalaya-bidding-BidResponse-SeatBid">BidResponse.SeatBid</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#scalar-value-types">Scalar Value Types</a></p>
+</li>
+</ul>
+<p><a name="xmopenrtb-proto"></a>
+<p align="right"><a href="#top">Top</a></p></p>
+<h2 id="xmopenrtbproto">xmopenrtb.proto</h2>
+<p><a name="com-ximalaya-bidding-BidRequest"></a></p>
+<h3 id="bidrequest">BidRequest</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>本次请求的唯一id</td>
+</tr>
+<tr>
+<td>api_version</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>协议版本（目前为"v1.0"）</td>
+</tr>
+<tr>
+<td>request_type</td>
+<td><a href="#int32">int32</a></td>
+<td></td>
+<td>请求类型(1: 正式环境; 2: ping,测试RTT; 4: 测试广告，不计费; 8:其他)</td>
+</tr>
+<tr>
+<td>imp</td>
+<td><a href="#com-ximalaya-bidding-BidRequest-Imp">BidRequest.Imp</a></td>
+<td>repeated</td>
+<td>曝光机会列表</td>
+</tr>
+<tr>
+<td>app</td>
+<td><a href="#com-ximalaya-bidding-BidRequest-App">BidRequest.App</a></td>
+<td></td>
+<td>APP信息</td>
+</tr>
+<tr>
+<td>device</td>
+<td><a href="#com-ximalaya-bidding-BidRequest-Device">BidRequest.Device</a></td>
+<td></td>
+<td>设备信息</td>
+</tr>
+<tr>
+<td>user</td>
+<td><a href="#com-ximalaya-bidding-BidRequest-User">BidRequest.User</a></td>
+<td></td>
+<td>设备信息</td>
+</tr>
+<tr>
+<td>geo</td>
+<td><a href="#com-ximalaya-bidding-BidRequest-Geo">BidRequest.Geo</a></td>
+<td></td>
+<td>地理位置信息</td>
+</tr>
+<tr>
+<td>pmp</td>
+<td><a href="#com-ximalaya-bidding-BidRequest-Pmp">BidRequest.Pmp</a></td>
+<td></td>
+<td>交易信息</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td><a href="#uint32">uint32</a></td>
+<td></td>
+<td>请求预留的时间，单位为ms</td>
+</tr>
+<tr>
+<td>ext</td>
+<td><a href="#com-ximalaya-bidding-BidRequest-Ext">BidRequest.Ext</a></td>
+<td></td>
+<td>扩展参数</td>
+</tr>
+</tbody>
+</table>
+<p><a name="com-ximalaya-bidding-BidRequest-App"></a></p>
+<h3 id="bidrequestapp">BidRequest.App</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>应用名称：例如：喜马拉雅FM</td>
+</tr>
+<tr>
+<td>bundle</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>应用程序包名：例如：com.ximalaya.iting</td>
+</tr>
+<tr>
+<td>version</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>应用版本号: 例如: 8.0.1</td>
+</tr>
+</tbody>
+</table>
+<p><a name="com-ximalaya-bidding-BidRequest-Caid"></a></p>
+<h3 id="bidrequestcaid">BidRequest.Caid</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>caid 的值</td>
+</tr>
+<tr>
+<td>version</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>caid 版本</td>
+</tr>
+</tbody>
+</table>
+<p><a name="com-ximalaya-bidding-BidRequest-Device"></a></p>
+<h3 id="bidrequestdevice">BidRequest.Device</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ua</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>UA信息</td>
+</tr>
+<tr>
+<td>ipv4</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>用户设备ipv4地址</td>
+</tr>
+<tr>
+<td>ipv6</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>用户设备ipv6地址</td>
+</tr>
+<tr>
+<td>carrier</td>
+<td><a href="#int32">int32</a></td>
+<td></td>
+<td>运营商（0：未知；1：移动; 2：联通；3：电信; 4: 广电）</td>
+</tr>
+<tr>
+<td>network_type</td>
+<td><a href="#int32">int32</a></td>
+<td></td>
+<td>网络连接类型（0:未知; 1:Ethernet/Wifi；2：2G；3：3G；4：4G; 5: 5G; 6: 6G[预留], 7: 移动网络未知）</td>
+</tr>
+<tr>
+<td>make</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>手机品牌，如：iPhone，Xiaomi</td>
+</tr>
+<tr>
+<td>model</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>手机型号，如：iPhoneX, KNT-AL10</td>
+</tr>
+<tr>
+<td>os</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>操作系统名称（ios</td>
+</tr>
+<tr>
+<td>osv</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>操作系统版本</td>
+</tr>
+<tr>
+<td>device_type</td>
+<td><a href="#int32">int32</a></td>
+<td></td>
+<td>设备类型（0：手机；1:平板; 2: 电脑; 3: other）</td>
+</tr>
+<tr>
+<td>screen_height</td>
+<td><a href="#int32">int32</a></td>
+<td>optional</td>
+<td>屏幕的物理高度，以像素为单位</td>
+</tr>
+<tr>
+<td>screen_width</td>
+<td><a href="#int32">int32</a></td>
+<td>optional</td>
+<td>屏幕的物理宽度，以像素为单位</td>
+</tr>
+<tr>
+<td>imei</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>Android IMEI原始值明文</td>
+</tr>
+<tr>
+<td>imei_md5</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>IMEI MD5, 小写</td>
+</tr>
+<tr>
+<td>android_id</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>AndroidId原始值明文</td>
+</tr>
+<tr>
+<td>android_id_md5</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>AndroidId MD5, 小写</td>
+</tr>
+<tr>
+<td>oaid</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>Android OAID原始值明文</td>
+</tr>
+<tr>
+<td>oaid_md5</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>Android OAID MD5, 小写</td>
+</tr>
+<tr>
+<td>hms_version</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>华为机型HMS Core版本号，华为设备必填</td>
+</tr>
+<tr>
+<td>ag_version</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>设备应用市场版本号，华为设备必填</td>
+</tr>
+<tr>
+<td>ag_country_code</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>应用市场中设置的国家和地区，华为设备必填</td>
+</tr>
+<tr>
+<td>oppo_store_version</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>oppo应用商店版本号，oppo设备必填</td>
+</tr>
+<tr>
+<td>vivo_store_version</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>vivo应用商店版本号，vivo设备必填</td>
+</tr>
+<tr>
+<td>mi_store_version</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>小米应用商店版本号，小米设备必填</td>
+</tr>
+<tr>
+<td>miui_version</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>小米系统版本，miui系统必填</td>
+</tr>
+<tr>
+<td>boot_ts</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>设备启动时间</td>
+</tr>
+<tr>
+<td>boot_mark</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>系统启动标识</td>
+</tr>
+<tr>
+<td>update_ts</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>设备系统更新时间</td>
+</tr>
+<tr>
+<td>update_mark</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>系统更新标识</td>
+</tr>
+<tr>
+<td>idfa</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>IDFA原始值明文</td>
+</tr>
+<tr>
+<td>idfa_md5</td>
+<td><a href="#string">string</a></td>
+<td>optional</td>
+<td>IDFA MD5, 小写</td>
+</tr>
+<tr>
+<td>caid</td>
+<td><a href="#com-ximalaya-bidding-BidRequest-Caid">BidRequest.Caid</a></td>
+<td>repeated</td>
+<td>CAID 对象数组</td>
+</tr>
+<tr>
+<td>caid_criteria</td>
+<td><a href="#com-ximalaya-bidding-BidRequest-Device-CAIDCriteria">BidRequest.Device.CAIDCriteria</a></td>
+<td>optional</td>
+<td>caid相关参数</td>
+</tr>
+</tbody>
+</table>
+<p><a name="com-ximalaya-bidding-BidRequest-Device-CAIDCriteria"></a></p>
+<h3 id="bidrequestdevicecaidcriteria">BidRequest.Device.CAIDCriteria</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caid_boot_sec</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>设备启动时间 UnixTimestamp eg: 1691052221</td>
+</tr>
+<tr>
+<td>caid_country_code</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>国家 eg: CN</td>
+</tr>
+<tr>
+<td>caid_language</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>语言 eg: zh-Hans-CN</td>
+</tr>
+<tr>
+<td>caid_device_name_md5</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>设备名称MD5 eg: e910dddb2748c36b47fcde5dd720eec1</td>
+</tr>
+<tr>
+<td>caid_system_version</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>系统版本 eg: 14.0</td>
+</tr>
+<tr>
+<td>caid_hardware_machine</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>设备 Machine, eg: iPhone10,3</td>
+</tr>
+<tr>
+<td>caid_carrier_info</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>运营商信息 eg: 中国移动</td>
+</tr>
+<tr>
+<td>caid_physical_memory_byte</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>物理内存容量 eg: 3955589120</td>
+</tr>
+<tr>
+<td>caid_harddisk_size_byte</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>硬盘容量 eg: 63900340224</td>
+</tr>
+<tr>
+<td>caid_system_update_sec</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>系统更新时间, 保留小数点后 6 位，如不够需补 0</td>
+</tr>
+<tr>
+<td>caid_hardware_model</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>设备 Model eg: D22AP</td>
+</tr>
+<tr>
+<td>caid_time_zone</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>时区 eg: 28800</td>
+</tr>
+<tr>
+<td>caid_mnt_id</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>mnt_id eg: 30225948939346695D0D744027A07803D5F8410346398776C879B727@/dev/disk1s1</td>
+</tr>
+<tr>
+<td>caid_file_init_time</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>设备初始化时间 eg: 1632467920.301150749</td>
+</tr>
+</tbody>
+</table>
+<p><a name="com-ximalaya-bidding-BidRequest-Ext"></a></p>
+<h3 id="bidrequestext">BidRequest.Ext</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>extra</td>
+<td><a href="#com-ximalaya-bidding-BidRequest-Ext-ExtraEntry">BidRequest.Ext.ExtraEntry</a></td>
+<td>repeated</td>
+<td>Extra自定义Map</td>
+</tr>
+</tbody>
+</table>
+<p><a name="com-ximalaya-bidding-BidRequest-Ext-ExtraEntry"></a></p>
+<h3 id="bidrequestextextraentry">BidRequest.Ext.ExtraEntry</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>value</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><a name="com-ximalaya-bidding-BidRequest-Geo"></a></p>
+<h3 id="bidrequestgeo">BidRequest.Geo</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td><a href="#int32">int32</a></td>
+<td></td>
+<td>坐标系: 经纬度有值时必传，坐标系类型 0:GCJ-02; 1:WGS-84; 2:bd09ll</td>
+</tr>
+<tr>
+<td>lat</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>纬度 latitude</td>
+</tr>
+<tr>
+<td>lon</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>经度 longitude</td>
+</tr>
+</tbody>
+</table>
+<p><a name="com-ximalaya-bidding-BidRequest-Imp"></a></p>
+<h3 id="bidrequestimp">BidRequest.Imp</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>标识唯一一次曝光机会</td>
+</tr>
+<tr>
+<td>tag_id</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>广告位ID</td>
+</tr>
+<tr>
+<td>ad_type</td>
+<td><a href="#int32">int32</a></td>
+<td></td>
+<td>广告类型（1:开屏、2：信息流、3：激励视频、4：贴片、5：banner）</td>
+</tr>
+<tr>
+<td>bid_type</td>
+<td><a href="#int32">int32</a></td>
+<td></td>
+<td>出价类型, 0：cpm 1：cpc 当前仅支持cpm</td>
+</tr>
+<tr>
+<td>bid_floor</td>
+<td><a href="#int64">int64</a></td>
+<td></td>
+<td>底价，分/千次曝光</td>
+</tr>
+<tr>
+<td>asset</td>
+<td><a href="#com-ximalaya-bidding-BidRequest-Imp-Asset">BidRequest.Imp.Asset</a></td>
+<td>repeated</td>
+<td>模版信息，详见模版资源映射表</td>
+</tr>
+</tbody>
+</table>
+<p><a name="com-ximalaya-bidding-BidRequest-Imp-Asset"></a></p>
+<h3 id="bidrequestimpasset">BidRequest.Imp.Asset</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>template_id</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>广告位模版ID, 详见模版资源映射表</td>
+</tr>
+<tr>
+<td>width</td>
+<td><a href="#int32">int32</a></td>
+<td></td>
+<td>广告位模版宽度</td>
+</tr>
+<tr>
+<td>height</td>
+<td><a href="#int32">int32</a></td>
+<td></td>
+<td>广告位模版高度</td>
+</tr>
+</tbody>
+</table>
+<p><a name="com-ximalaya-bidding-BidRequest-Pmp"></a></p>
+<h3 id="bidrequestpmp">BidRequest.Pmp</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>deal_id</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>直接交易的唯一ID</td>
+</tr>
+</tbody>
+</table>
+<p><a name="com-ximalaya-bidding-BidRequest-User"></a></p>
+<h3 id="bidrequestuser">BidRequest.User</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>[保留字段] 用户唯一标识</td>
+</tr>
+<tr>
+<td>app_list</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>用户已安装app列表</td>
+</tr>
+</tbody>
+</table>
+<p><a name="com-ximalaya-bidding-BidResponse"></a></p>
+<h3 id="bidresponse">BidResponse</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>请求ID，需与BidRequest.id一致</td>
+</tr>
+<tr>
+<td>code</td>
+<td><a href="#int32">int32</a></td>
+<td></td>
+<td>广告响应状态码</td>
+</tr>
+<tr>
+<td>bid_id</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>喜马联盟侧生成的竞价ID</td>
+</tr>
+<tr>
+<td>seat_bid</td>
+<td><a href="#com-ximalaya-bidding-BidResponse-SeatBid">BidResponse.SeatBid</a></td>
+<td>repeated</td>
+<td>喜马联盟侧生成的竞价信息，目前只有一个</td>
+</tr>
+</tbody>
+</table>
+<p><a name="com-ximalaya-bidding-BidResponse-Bid"></a></p>
+<h3 id="bidresponsebid">BidResponse.Bid</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>dsp侧针对这次竞价的ID</td>
+</tr>
+<tr>
+<td>imp_id</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>曝光ID，对应BidRequest.imp.id，必填</td>
+</tr>
+<tr>
+<td>ad_id</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>广告id</td>
+</tr>
+<tr>
+<td>price</td>
+<td><a href="#int64">int64</a></td>
+<td></td>
+<td>DSP出价，单位：分/千次曝光</td>
+</tr>
+<tr>
+<td>win_notice_url</td>
+<td><a href="#string">string</a></td>
+<td>repeated</td>
+<td>竞价成功通知地址</td>
+</tr>
+<tr>
+<td>loss_notice_url</td>
+<td><a href="#string">string</a></td>
+<td>repeated</td>
+<td>可选。竞价失败通知的url列表</td>
+</tr>
+<tr>
+<td>imp_trackers</td>
+<td><a href="#string">string</a></td>
+<td>repeated</td>
+<td>曝光监测地址</td>
+</tr>
+<tr>
+<td>clk_trackers</td>
+<td><a href="#string">string</a></td>
+<td>repeated</td>
+<td>点击监测地址</td>
+</tr>
+<tr>
+<td>adm</td>
+<td><a href="#com-ximalaya-bidding-BidResponse-Bid-Adm">BidResponse.Bid.Adm</a></td>
+<td></td>
+<td>创意物料信息</td>
+</tr>
+<tr>
+<td>deal_id</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>直接交易的唯一ID</td>
+</tr>
+</tbody>
+</table>
+<p><a name="com-ximalaya-bidding-BidResponse-Bid-Adm"></a></p>
+<h3 id="bidresponsebidadm">BidResponse.Bid.Adm</h3>
+<p>物料信息</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>template_id</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>模版ID</td>
+</tr>
+<tr>
+<td>creative_id</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>可选。广告物料的唯一标识</td>
+</tr>
+<tr>
+<td>title</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>标题</td>
+</tr>
+<tr>
+<td>desc</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>描述</td>
+</tr>
+<tr>
+<td>image</td>
+<td><a href="#com-ximalaya-bidding-BidResponse-Bid-Adm-Image">BidResponse.Bid.Adm.Image</a></td>
+<td>repeated</td>
+<td>图片信息</td>
+</tr>
+<tr>
+<td>video</td>
+<td><a href="#com-ximalaya-bidding-BidResponse-Bid-Adm-Video">BidResponse.Bid.Adm.Video</a></td>
+<td></td>
+<td>视频信息</td>
+</tr>
+<tr>
+<td>deep_link</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>客户端优先跳转deeplink链接,其次跳转普通网址类或应用下载类的落地页</td>
+</tr>
+<tr>
+<td>link</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>落地页url</td>
+</tr>
+<tr>
+<td>download_url</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>应用下载必填。应用下载url</td>
+</tr>
+<tr>
+<td>app_name</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>针对应用下载类广告</td>
+</tr>
+</tbody>
+</table>
+<p><a name="com-ximalaya-bidding-BidResponse-Bid-Adm-Image"></a></p>
+<h3 id="bidresponsebidadmimage">BidResponse.Bid.Adm.Image</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>图片URL</td>
+</tr>
+<tr>
+<td>width</td>
+<td><a href="#int32">int32</a></td>
+<td></td>
+<td>图片宽度</td>
+</tr>
+<tr>
+<td>height</td>
+<td><a href="#int32">int32</a></td>
+<td></td>
+<td>图片高度</td>
+</tr>
+<tr>
+<td>mime</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>图片类型， 如：JPG/JPEG/PNG</td>
+</tr>
+</tbody>
+</table>
+<p><a name="com-ximalaya-bidding-BidResponse-Bid-Adm-Video"></a></p>
+<h3 id="bidresponsebidadmvideo">BidResponse.Bid.Adm.Video</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>video_url</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>视频URL</td>
+</tr>
+<tr>
+<td>width</td>
+<td><a href="#int32">int32</a></td>
+<td></td>
+<td>视频宽度</td>
+</tr>
+<tr>
+<td>height</td>
+<td><a href="#int32">int32</a></td>
+<td></td>
+<td>视频高度</td>
+</tr>
+<tr>
+<td>duration</td>
+<td><a href="#int32">int32</a></td>
+<td></td>
+<td>视频素材的播放时长，单位：秒</td>
+</tr>
+<tr>
+<td>size</td>
+<td><a href="#int32">int32</a></td>
+<td></td>
+<td>视频文件的大小，单位Byte</td>
+</tr>
+<tr>
+<td>mime</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>视频素材类型，以MIME类型表示</td>
+</tr>
+<tr>
+<td>cover</td>
+<td><a href="#string">string</a></td>
+<td></td>
+<td>视频封面图</td>
+</tr>
+</tbody>
+</table>
+<p><a name="com-ximalaya-bidding-BidResponse-SeatBid"></a></p>
+<h3 id="bidresponseseatbid">BidResponse.SeatBid</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Label</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bid</td>
+<td><a href="#com-ximalaya-bidding-BidResponse-Bid">BidResponse.Bid</a></td>
+<td>repeated</td>
+<td>DSP参与竞价的位置，与BidRequest.imp对应，每个imp最多只可返回一个bid</td>
+</tr>
+</tbody>
+</table>
+<!-- end messages -->
+
+<!-- end enums -->
+
+<!-- end HasExtensions -->
+
+<!-- end services -->
+
+<h2 id="scalar-value-types">Scalar Value Types</h2>
+<table>
+<thead>
+<tr>
+<th>.proto Type</th>
+<th>Notes</th>
+<th>C++</th>
+<th>Java</th>
+<th>Python</th>
+<th>Go</th>
+<th>C#</th>
+<th>PHP</th>
+<th>Ruby</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a name="double" /> double</td>
+<td></td>
+<td>double</td>
+<td>double</td>
+<td>float</td>
+<td>float64</td>
+<td>double</td>
+<td>float</td>
+<td>Float</td>
+</tr>
+<tr>
+<td><a name="float" /> float</td>
+<td></td>
+<td>float</td>
+<td>float</td>
+<td>float</td>
+<td>float32</td>
+<td>float</td>
+<td>float</td>
+<td>Float</td>
+</tr>
+<tr>
+<td><a name="int32" /> int32</td>
+<td>Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint32 instead.</td>
+<td>int32</td>
+<td>int</td>
+<td>int</td>
+<td>int32</td>
+<td>int</td>
+<td>integer</td>
+<td>Bignum or Fixnum (as required)</td>
+</tr>
+<tr>
+<td><a name="int64" /> int64</td>
+<td>Uses variable-length encoding. Inefficient for encoding negative numbers – if your field is likely to have negative values, use sint64 instead.</td>
+<td>int64</td>
+<td>long</td>
+<td>int/long</td>
+<td>int64</td>
+<td>long</td>
+<td>integer/string</td>
+<td>Bignum</td>
+</tr>
+<tr>
+<td><a name="uint32" /> uint32</td>
+<td>Uses variable-length encoding.</td>
+<td>uint32</td>
+<td>int</td>
+<td>int/long</td>
+<td>uint32</td>
+<td>uint</td>
+<td>integer</td>
+<td>Bignum or Fixnum (as required)</td>
+</tr>
+<tr>
+<td><a name="uint64" /> uint64</td>
+<td>Uses variable-length encoding.</td>
+<td>uint64</td>
+<td>long</td>
+<td>int/long</td>
+<td>uint64</td>
+<td>ulong</td>
+<td>integer/string</td>
+<td>Bignum or Fixnum (as required)</td>
+</tr>
+<tr>
+<td><a name="sint32" /> sint32</td>
+<td>Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int32s.</td>
+<td>int32</td>
+<td>int</td>
+<td>int</td>
+<td>int32</td>
+<td>int</td>
+<td>integer</td>
+<td>Bignum or Fixnum (as required)</td>
+</tr>
+<tr>
+<td><a name="sint64" /> sint64</td>
+<td>Uses variable-length encoding. Signed int value. These more efficiently encode negative numbers than regular int64s.</td>
+<td>int64</td>
+<td>long</td>
+<td>int/long</td>
+<td>int64</td>
+<td>long</td>
+<td>integer/string</td>
+<td>Bignum</td>
+</tr>
+<tr>
+<td><a name="fixed32" /> fixed32</td>
+<td>Always four bytes. More efficient than uint32 if values are often greater than 2^28.</td>
+<td>uint32</td>
+<td>int</td>
+<td>int</td>
+<td>uint32</td>
+<td>uint</td>
+<td>integer</td>
+<td>Bignum or Fixnum (as required)</td>
+</tr>
+<tr>
+<td><a name="fixed64" /> fixed64</td>
+<td>Always eight bytes. More efficient than uint64 if values are often greater than 2^56.</td>
+<td>uint64</td>
+<td>long</td>
+<td>int/long</td>
+<td>uint64</td>
+<td>ulong</td>
+<td>integer/string</td>
+<td>Bignum</td>
+</tr>
+<tr>
+<td><a name="sfixed32" /> sfixed32</td>
+<td>Always four bytes.</td>
+<td>int32</td>
+<td>int</td>
+<td>int</td>
+<td>int32</td>
+<td>int</td>
+<td>integer</td>
+<td>Bignum or Fixnum (as required)</td>
+</tr>
+<tr>
+<td><a name="sfixed64" /> sfixed64</td>
+<td>Always eight bytes.</td>
+<td>int64</td>
+<td>long</td>
+<td>int/long</td>
+<td>int64</td>
+<td>long</td>
+<td>integer/string</td>
+<td>Bignum</td>
+</tr>
+<tr>
+<td><a name="bool" /> bool</td>
+<td></td>
+<td>bool</td>
+<td>boolean</td>
+<td>boolean</td>
+<td>bool</td>
+<td>bool</td>
+<td>boolean</td>
+<td>TrueClass/FalseClass</td>
+</tr>
+<tr>
+<td><a name="string" /> string</td>
+<td>A string must always contain UTF-8 encoded or 7-bit ASCII text.</td>
+<td>string</td>
+<td>String</td>
+<td>str/unicode</td>
+<td>string</td>
+<td>string</td>
+<td>string</td>
+<td>String (UTF-8)</td>
+</tr>
+<tr>
+<td><a name="bytes" /> bytes</td>
+<td>May contain any arbitrary sequence of bytes.</td>
+<td>string</td>
+<td>ByteString</td>
+<td>str</td>
+<td>[]byte</td>
+<td>ByteString</td>
+<td>string</td>
+<td>String (ASCII-8BIT)</td>
+</tr>
+</tbody>
+</table>
+<p>Generated by <a href="https://github.com/pseudomuto/protoc-gen-doc">protoc-gen-doc</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../protocol/" title="技术接口" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                技术接口
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../protofile/" title="协议文件" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                协议文件
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.92ffa368.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5123e3d4.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["content.code.annotate", "content.code.select", "content.code.copy"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
