@@ -1004,7 +1004,8 @@
 <h4 id="42">4.2: 点击</h4>
 <p>click_urls 为点击监测地址，⼴告⼀经曝光，就会⽴即上报该数组的链接，上报会从用户手机上发起，上报⽅式为http get请求。如需要相关宏替换的操作，⻅1.4.4支持的宏替换。</p>
 <h4 id="43">4.3: 竞价成功/失败</h4>
-<p>win_notice_url 为竞价成功通知地址，需要对结算价格字段("<strong>SETTLE_PRICE</strong>")进行宏替换</p>
+<p>win_notice_url 为竞价成功通知地址，需要对结算价格字段(<code>__SETTLE_PRICE__</code>)进行宏替换
+loss_notice_url 为竞价失败通知地址，需要对结算价格字段(<code>__LOSS_MESSAGE__</code>)进行宏替换</p>
 <h4 id="44">4.4: 支持的宏替换</h4>
 <table>
 <thead>
